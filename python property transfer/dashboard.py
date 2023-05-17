@@ -3,7 +3,8 @@ from tkinter import ttk
 import customtkinter as ctk
 from tkinter.messagebox import showinfo
 from PIL import Image
-import tkcalendar
+from tkcalendar import *
+
 
 ctk.set_appearance_mode("system")  # Modes: system (default), light, dark
 
@@ -12,7 +13,7 @@ class history_window(ctk.CTkToplevel):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.title("Property Transfer | History")
-        self.geometry("{0}x{1}+200+50".format(950, 550))
+        self.geometry("{0}x{1}+200+50".format(1000, 550))
         self.resizable(False, False)
         self.configure(fg_color = 'white')
         self.iconbitmap('python property transfer\images\icons8-data-transfer-483.ico')
@@ -33,23 +34,8 @@ class history_window(ctk.CTkToplevel):
         app_name2 = ctk.CTkLabel(header_frame, text='TRANSFER', font= ctk.CTkFont('Arial', size = 22, weight = "bold"), text_color='#ee4444')
         app_name2.pack(side = 'left', pady = 10)
 
-        #user
-        user_icon = ctk.CTkImage(Image.open('python property transfer\images\icons8-user-30.png'), size=(30, 30))
-        user_button = ctk.CTkButton(header_frame, image= user_icon, text=None, fg_color='transparent', width= 30)
-        user_button.pack(side = 'right', pady = 10, padx = 20)
-        
-        #settings
-        settings_icon = ctk.CTkImage(Image.open('python property transfer\images\icons8-settings-50.png'), size=(30, 30))
-        settings_button = ctk.CTkButton(header_frame, image= settings_icon, text=None, fg_color='transparent', width= 30)
-        settings_button.pack(side = 'right', pady = 10, padx = 20)
-        
-        #notification bell
-        notif_bell_icon = ctk.CTkImage(Image.open('python property transfer\images\icons8-bell-48.png'), size=(30, 30))
-        notif_bell_button = ctk.CTkButton(header_frame, image= notif_bell_icon, text=None, fg_color='transparent', width= 30)
-        notif_bell_button.pack(side = 'right', pady = 10, padx = 20)
-        
-        history_label = ctk.CTkLabel(self, text = 'History')
-        history_label.pack()
+        label = ctk.CTkLabel(header_frame, text = 'History', font= ctk.CTkFont('Arial', size = 25, weight = "bold"), text_color='white')
+        label.pack(side = 'right',  pady = 15, padx = 15)
         
         
 #users window
@@ -78,30 +64,15 @@ class users_window(ctk.CTkToplevel):
         app_name2 = ctk.CTkLabel(header_frame, text='TRANSFER', font= ctk.CTkFont('Arial', size = 22, weight = "bold"), text_color='#ee4444')
         app_name2.pack(side = 'left', pady = 10)
 
-        #user
-        user_icon = ctk.CTkImage(Image.open('python property transfer\images\icons8-user-30.png'), size=(30, 30))
-        user_button = ctk.CTkButton(header_frame, image= user_icon, text=None, fg_color='transparent', width= 30)
-        user_button.pack(side = 'right', pady = 10, padx = 20)
-        
-        #settings
-        settings_icon = ctk.CTkImage(Image.open('python property transfer\images\icons8-settings-50.png'), size=(30, 30))
-        settings_button = ctk.CTkButton(header_frame, image= settings_icon, text=None, fg_color='transparent', width= 30)
-        settings_button.pack(side = 'right', pady = 10, padx = 20)
-        
-        #notification bell
-        notif_bell_icon = ctk.CTkImage(Image.open('python property transfer\images\icons8-bell-48.png'), size=(30, 30))
-        notif_bell_button = ctk.CTkButton(header_frame, image= notif_bell_icon, text=None, fg_color='transparent', width= 30)
-        notif_bell_button.pack(side = 'right', pady = 10, padx = 20)
-        
-        users_label = ctk.CTkLabel(self, text = 'Users')
-        users_label.pack()
+        label = ctk.CTkLabel(header_frame, text = 'Users', font= ctk.CTkFont('Arial', size = 25, weight = "bold"), text_color='white')
+        label.pack(side = 'right',  pady = 15, padx = 15)
         
         
 class report_window(ctk.CTkToplevel):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.title("Property Transfer | Report")
-        self.geometry("{0}x{1}+200+50".format(1000, 600))
+        self.geometry("{0}x{1}+200+30".format(1000, 650))
         self.resizable(False, False)
         self.configure(fg_color = 'white')
         self.iconbitmap('python property transfer\images\icons8-data-transfer-483.ico')
@@ -122,24 +93,78 @@ class report_window(ctk.CTkToplevel):
         app_name2 = ctk.CTkLabel(header_frame, text='TRANSFER', font= ctk.CTkFont('Arial', size = 22, weight = "bold"), text_color='#ee4444')
         app_name2.pack(side = 'left', pady = 10)
 
-        #user
-        user_icon = ctk.CTkImage(Image.open('python property transfer\images\icons8-user-30.png'), size=(30, 30))
-        user_button = ctk.CTkButton(header_frame, image= user_icon, text=None, fg_color='transparent', width= 30)
-        user_button.pack(side = 'right', pady = 10, padx = 20)
+        label = ctk.CTkLabel(header_frame, text = 'Reports', font= ctk.CTkFont('Arial', size = 25, weight = "bold"), text_color='white')
+        label.pack(side = 'right',  pady = 15, padx = 15)
+
+        frame = ctk.CTkFrame(self, height=400, corner_radius=20)
+        frame.pack(fill = 'both', pady = 15, padx = 15)
         
-        #settings
-        settings_icon = ctk.CTkImage(Image.open('python property transfer\images\icons8-settings-50.png'), size=(30, 30))
-        settings_button = ctk.CTkButton(header_frame, image= settings_icon, text=None, fg_color='transparent', width= 30)
-        settings_button.pack(side = 'right', pady = 10, padx = 20)
+        sub_frame = ctk.CTkFrame(frame)
+        sub_frame.pack(fill = 'x')
         
-        #notification bell
-        notif_bell_icon = ctk.CTkImage(Image.open('python property transfer\images\icons8-bell-48.png'), size=(30, 30))
-        notif_bell_button = ctk.CTkButton(header_frame, image= notif_bell_icon, text=None, fg_color='transparent', width= 30)
-        notif_bell_button.pack(side = 'right', pady = 10, padx = 20)
+        entity_label = ctk.CTkLabel(sub_frame, text='Entity Name: ')
+        entity_label.pack(side = 'left', pady = 10, padx = 10)
+        entity_name = ctk.CTkEntry(sub_frame, width=300)
+        entity_name.pack(side = 'left', pady = 10, padx = 10)
         
-        report_label = ctk.CTkLabel(self, text = 'Report')
-        report_label.pack()
-       
+        fund_cluster_label = ctk.CTkLabel(sub_frame, text='Fund Cluster: ')
+        fund_cluster_label.pack(side = 'left', pady = 10, padx = 10)
+        fund_cluster= ctk.CTkEntry(sub_frame)
+        fund_cluster.pack(side = 'left', pady = 10, padx = 10)
+        
+        sub_frame2 = ctk.CTkFrame(frame)
+        sub_frame2.pack(fill = 'x')
+        
+        from_label = ctk.CTkLabel(sub_frame2, text='From Accountable Officer/Agency Cluster Fund: ')
+        from_label.pack(side = 'left', pady = 10, padx = 10)
+        from_ao_afc = ctk.CTkEntry(sub_frame2, width = 300)
+        from_ao_afc.pack(side = 'left', pady = 10, padx = 10)
+        
+        ptr_label = ctk.CTkLabel(sub_frame2, text='PTR No.: ')
+        ptr_label.pack(side = 'left', pady = 10, padx = 10)
+        ptr_no = ctk.CTkEntry(sub_frame2)
+        ptr_no.pack(side = 'left', pady = 10, padx = 10)
+        
+        sub_frame3 = ctk.CTkFrame(frame)
+        sub_frame3.pack(fill = 'x')
+        
+        to_label = ctk.CTkLabel(sub_frame3, text='To Accountable Officer/Agency Cluster Fund: ')
+        to_label.pack(side = 'left', pady = 10, padx = 10)
+        to_ao_afc = ctk.CTkEntry(sub_frame3, width = 300)
+        to_ao_afc.pack(side = 'left', pady = 10, padx = 10)
+        
+        date_label = ctk.CTkLabel(sub_frame3, text='Date: ')
+        date_label.pack(side = 'left', pady = 10, padx = 10)
+        date = DateEntry(sub_frame3, font= ctk.CTkFont('Arial', size = 15) )
+        date.pack(side = 'left', pady = 10, padx = 10, ipady =2, ipadx = 2)
+        
+        frame2 = ctk.CTkFrame(self, corner_radius=20)
+        frame2.pack(fill = 'both', pady = 15, padx = 15)
+        
+        sub_frame4 = ctk.CTkFrame(frame2)
+        sub_frame4.pack(fill = 'x')
+        
+        transfer_type_label = ctk.CTkLabel(sub_frame4, text='Transfer Type (Select Only One): ')
+        transfer_type_label.pack(side = 'left', pady = 10, padx = 10)
+        transfer_1 = ctk.CTkCheckBox(sub_frame4, text='Donation')
+        transfer_1.pack(side = 'left', pady = 10, padx = 10)
+        
+        transfer_2 = ctk.CTkCheckBox(sub_frame4, text='Relocate')
+        transfer_2.pack(side = 'left', pady = 10, padx = 10)
+        
+        transfer_3 = ctk.CTkCheckBox(sub_frame4, text='Reassign')
+        transfer_3.pack(side = 'left', pady = 10, padx = 10)
+        
+        transfer_4 = ctk.CTkCheckBox(sub_frame4, text='Others (Specify): ')
+        transfer_4_2 = ctk.CTkEntry(sub_frame4)
+        transfer_4.pack(side = 'left', pady = 10, padx = 10)
+        transfer_4_2.pack(side = 'left', pady = 10, padx = 10)
+        
+        frame3 = ctk.CTkScrollableFrame(self)
+        frame3.pack(fill = 'both', pady = 15, padx = 15)
+        
+        gen_report = ctk.CTkButton(self, text = 'Generate Report', font= ctk.CTkFont('Arial', size = 15, weight = "bold"), text_color='white', corner_radius = 30)
+        gen_report.pack(side = 'right', pady = 10, padx = 15, ipady = 5)
         
 #request window
 class request_window(ctk.CTkToplevel):
@@ -166,25 +191,12 @@ class request_window(ctk.CTkToplevel):
         app_name1.pack(side = 'left', pady = 10, padx = 10)
         app_name2 = ctk.CTkLabel(header_frame, text='TRANSFER', font= ctk.CTkFont('Arial', size = 22, weight = "bold"), text_color='#ee4444')
         app_name2.pack(side = 'left', pady = 10)
-
-        #user
-        user_icon = ctk.CTkImage(Image.open('python property transfer\images\icons8-user-30.png'), size=(30, 30))
-        user_button = ctk.CTkButton(header_frame, image= user_icon, text=None, fg_color='transparent', width= 30)
-        user_button.pack(side = 'right', pady = 10, padx = 20)
         
-        #settings
-        settings_icon = ctk.CTkImage(Image.open('python property transfer\images\icons8-settings-50.png'), size=(30, 30))
-        settings_button = ctk.CTkButton(header_frame, image= settings_icon, text=None, fg_color='transparent', width= 30)
-        settings_button.pack(side = 'right', pady = 10, padx = 20)
+        label = ctk.CTkLabel(header_frame, text = 'Requests', font= ctk.CTkFont('Arial', size = 25, weight = "bold"), text_color='white')
+        label.pack(side = 'right',  pady = 15, padx = 15)
         
-        #notification bell
-        notif_bell_icon = ctk.CTkImage(Image.open('python property transfer\images\icons8-bell-48.png'), size=(30, 30))
-        notif_bell_button = ctk.CTkButton(header_frame, image= notif_bell_icon, text=None, fg_color='transparent', width= 30)
-        notif_bell_button.pack(side = 'right', pady = 10, padx = 20)
-        
-        request_label = ctk.CTkLabel(self, text = 'Requests')
-        request_label.pack()
-        
+        frame = ctk.CTkFrame(self)
+        frame.pack(fill = 'both', side = 'left', padx = 15, pady = 15)
         
 #items window
 class items_window(ctk.CTkToplevel):
@@ -212,28 +224,68 @@ class items_window(ctk.CTkToplevel):
         app_name2 = ctk.CTkLabel(header_frame, text='TRANSFER', font= ctk.CTkFont('Arial', size = 22, weight = "bold"), text_color='#ee4444')
         app_name2.pack(side = 'left', pady = 10)
 
-        #user
-        user_icon = ctk.CTkImage(Image.open('python property transfer\images\icons8-user-30.png'), size=(30, 30))
-        user_button = ctk.CTkButton(header_frame, image= user_icon, text=None, fg_color='transparent', width= 30)
-        user_button.pack(side = 'right', pady = 10, padx = 20)
+        label = ctk.CTkLabel(header_frame, text = 'Items', font= ctk.CTkFont('Arial', size = 25, weight = "bold"), text_color='white')
+        label.pack(side = 'right',  pady = 15, padx = 15)
         
-        #settings
-        settings_icon = ctk.CTkImage(Image.open('python property transfer\images\icons8-settings-50.png'), size=(30, 30))
-        settings_button = ctk.CTkButton(header_frame, image= settings_icon, text=None, fg_color='transparent', width= 30)
-        settings_button.pack(side = 'right', pady = 10, padx = 20)
+        #for table
+        frame = ctk.CTkFrame(self, width = 700)
+        frame.pack(fill = 'both', side = 'left', padx = 15, pady = 15)
         
-        #notification bell
-        notif_bell_icon = ctk.CTkImage(Image.open('python property transfer\images\icons8-bell-48.png'), size=(30, 30))
-        notif_bell_button = ctk.CTkButton(header_frame, image= notif_bell_icon, text=None, fg_color='transparent', width= 30)
-        notif_bell_button.pack(side = 'right', pady = 10, padx = 20)
+        #for input
+        frame2 = ctk.CTkFrame(self, width = 300, fg_color='#f5f7f7', corner_radius=20)
+        frame2.pack(fill = 'both', side = 'left', padx = (0,15), pady = 15)
         
-        frame = ctk.CTkFrame(self, fg_color='transparent')
-        frame.pack(fill = 'both')
-        label = ctk.CTkLabel(frame, text = 'Items', font= ctk.CTkFont('Arial', size = 22, weight = "bold"), text_color="black")
-        label.pack(side = 'left',  pady = 15, padx = 15)
+        #item no.
+        item_no_label_frame = ctk.CTkFrame(frame2, fg_color='transparent')
+        item_no_label_frame.pack(fill = 'x', pady = (20, 0))
+        item_no_label = ctk.CTkLabel(item_no_label_frame, text = 'Property No.', font= ctk.CTkFont('Arial', size = 18))
+        item_no_label.pack(side = 'left', pady = (10,0), padx = 10)
         
-                
-
+        item_no = ctk.CTkEntry(frame2, width=250, font= ctk.CTkFont('Arial', size = 15))
+        item_no.pack(pady = (0, 10), padx = 10)
+        
+        #item name
+        item_name_label_frame = ctk.CTkFrame(frame2, fg_color='transparent')
+        item_name_label_frame.pack(fill = 'x')
+        item_name_label = ctk.CTkLabel(item_name_label_frame, text = 'Name', font= ctk.CTkFont('Arial', size = 18))
+        item_name_label.pack(side = 'left', pady = (10,0), padx = 10)
+        
+        item_name = ctk.CTkEntry(frame2, width=250, font= ctk.CTkFont('Arial', size = 15))
+        item_name.pack(pady = (0, 10), padx = 10)
+        
+        #item description
+        item_description_label_frame = ctk.CTkFrame(frame2, fg_color='transparent')
+        item_description_label_frame.pack(fill = 'x')
+        item_description_label = ctk.CTkLabel(item_description_label_frame, text = 'Description', font= ctk.CTkFont('Arial', size = 18))
+        item_description_label.pack(side = 'left', pady = (10,0), padx = 10)
+        
+        item_description = ctk.CTkEntry(frame2, width=250, font= ctk.CTkFont('Arial', size = 15))
+        item_description.pack(pady = (0, 10), padx = 10)
+        
+        #item location
+        item_loc_label_frame = ctk.CTkFrame(frame2, fg_color='transparent')
+        item_loc_label_frame.pack(fill = 'x')
+        item_loc_label = ctk.CTkLabel(item_loc_label_frame, text = 'Current Location', font= ctk.CTkFont('Arial', size = 18))
+        item_loc_label.pack(side = 'left', pady = (10,0), padx = 10)
+        
+        loc_options = ["Computer Laboratory 1", "Computer Laboratory 2", "Computer Laboratory 3"]
+        item_loc = ctk.CTkOptionMenu(frame2, width=250, values=loc_options, fg_color= 'white', text_color='black', dropdown_fg_color='white', font= ctk.CTkFont('Arial', size = 15), dropdown_font=ctk.CTkFont('Arial', size = 15))
+        item_loc.pack(pady = (0, 10), padx = 10)
+        
+        #item quantity
+        item_quantity_label_frame = ctk.CTkFrame(frame2, fg_color='transparent')
+        item_quantity_label_frame.pack(fill = 'x')
+        item_quantity_label = ctk.CTkLabel(item_quantity_label_frame, text = 'Quantity', font= ctk.CTkFont('Arial', size = 18))
+        item_quantity_label.pack(side = 'left', pady = (10,0), padx = 10)
+        
+        item_quantity = tk.Spinbox(frame2, from_= 0, to= 1000, borderwidth=2, width=250, font= ctk.CTkFont('Arial', size = 16))
+        item_quantity.pack(pady = (0, 10), padx = 10)
+        
+        #add button
+        add_button = ctk.CTkButton(frame2, text = 'Add', font= ctk.CTkFont('Arial', size = 18, weight = "bold"), text_color='white', corner_radius = 30)
+        add_button.pack(pady = 35, ipady = 5)
+        
+        
 #dashboard window
 class dashboard_window(ctk.CTk):
     def __init__(self):
@@ -339,7 +391,7 @@ class dashboard_window(ctk.CTk):
         self.items_toplevel_window = None
         
         request_icon = ctk.CTkImage(Image.open('python property transfer\images\icons8-table-100.png'), size=(90, 90))
-        request_button = ctk.CTkButton(nav_container, command = self.open_request_toplevel, fg_color='transparent', image= request_icon, text='Request', width= 30, text_color='black', compound="top")
+        request_button = ctk.CTkButton(nav_container, command = self.open_request_toplevel, fg_color='transparent', image= request_icon, text='Requests', width= 30, text_color='black', compound="top")
         request_button.pack(side = 'left', pady = 10, padx = 45)
         
         self.request_toplevel_window = None
