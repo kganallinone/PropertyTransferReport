@@ -1,14 +1,6 @@
-import tkinter as tk
-from tkinter import ttk
-import customtkinter as ctk
-from tkinter.messagebox import showinfo
-from PIL import Image
-
-ctk.set_appearance_mode("system")  # Modes: system (default), light, dark
-
-class items_window(ctk.CTk):
-    def __init__(self):
-        super().__init__()
+class items_window(ctk.CTkToplevel):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         self.title("Property Transfer | Items")
         self.geometry("{0}x{1}+200+50".format(1000, 600))
         self.resizable(False, False)
@@ -31,57 +23,64 @@ class items_window(ctk.CTk):
         app_name2 = ctk.CTkLabel(header_frame, text='TRANSFER', font= ctk.CTkFont('Arial', size = 22, weight = "bold"), text_color='#ee4444')
         app_name2.pack(side = 'left', pady = 10)
 
-        #user
-        user_icon = ctk.CTkImage(Image.open('python property transfer\images\icons8-user-30.png'), size=(30, 30))
-        user_button = ctk.CTkButton(header_frame, image= user_icon, text=None, fg_color='transparent', width= 30)
-        user_button.pack(side = 'right', pady = 10, padx = 20)
+        label = ctk.CTkLabel(header_frame, text = 'Items', font= ctk.CTkFont('Arial', size = 25, weight = "bold"), text_color='white')
+        label.pack(side = 'right',  pady = 15, padx = 15)
         
-        #settings
-        settings_icon = ctk.CTkImage(Image.open('python property transfer\images\icons8-settings-50.png'), size=(30, 30))
-        settings_button = ctk.CTkButton(header_frame, image= settings_icon, text=None, fg_color='transparent', width= 30)
-        settings_button.pack(side = 'right', pady = 10, padx = 20)
+        #for table
+        frame = ctk.CTkFrame(self, width = 700)
+        frame.pack(fill = 'both', side = 'left', padx = 15, pady = 15)
         
-        #notification bell
-        notif_bell_icon = ctk.CTkImage(Image.open('python property transfer\images\icons8-bell-48.png'), size=(30, 30))
-        notif_bell_button = ctk.CTkButton(header_frame, image= notif_bell_icon, text=None, fg_color='transparent', width= 30)
-        notif_bell_button.pack(side = 'right', pady = 10, padx = 20)
+        #for input
+        frame2 = ctk.CTkFrame(self, width = 300, fg_color='#f2f2f2', corner_radius=20)
+        frame2.pack(fill = 'both', side = 'left', padx = (0,15), pady = 15)
         
-        #mini dashboard frame
-        mini_dashboard_frame = ctk.CTkFrame(self, fg_color='transparent' )
-        mini_dashboard_frame.pack(fill='both')
+        #item no.
+        item_no_label_frame = ctk.CTkFrame(frame2, fg_color='transparent')
+        item_no_label_frame.pack(fill = 'x', pady = (20, 0))
+        item_no_label = ctk.CTkLabel(item_no_label_frame, text = 'Property No.', font= ctk.CTkFont('Arial', size = 18))
+        item_no_label.pack(side = 'left', pady = (10,0), padx = 10)
         
-        #mini dashboard
-        mini_dashboard_title = ctk.CTkLabel(mini_dashboard_frame, text="Mini Dashboard",font= ctk.CTkFont('Arial', size = 22, weight = "bold"), text_color="black")
-        mini_dashboard_title.pack(side = 'left', pady = 15, padx = 15)
+        item_no = ctk.CTkEntry(frame2, width=250, font= ctk.CTkFont('Arial', size = 15))
+        item_no.pack(pady = (0, 10), padx = 10)
         
-        mini_dashboard_container = ctk.CTkFrame(self, fg_color='transparent')
-        mini_dashboard_container.pack(fill = 'both')
-        #mini dashboard contents
-        mini_dashboard_content_frame = ctk.CTkFrame(mini_dashboard_container, fg_color = 'transparent')
-        mini_dashboard_content_frame.pack(side = 'left', padx =20,fill = 'y')
+        #item name
+        item_name_label_frame = ctk.CTkFrame(frame2, fg_color='transparent')
+        item_name_label_frame.pack(fill = 'x')
+        item_name_label = ctk.CTkLabel(item_name_label_frame, text = 'Name', font= ctk.CTkFont('Arial', size = 18))
+        item_name_label.pack(side = 'left', pady = (10,0), padx = 10)
         
-        content1 = ctk.CTkFrame(mini_dashboard_content_frame, height=100, width=300, corner_radius=15 )
-        content1.pack(fill = 'y')
-        content1_label = ctk.CTkLabel(content1, text="No. of Items", height=100, width=300, anchor="nw", font= ctk.CTkFont('Arial', size = 22, weight = "bold"))
-        content1_label.pack(pady = (10,0), padx = (10,0))
+        item_name = ctk.CTkEntry(frame2, width=250, font= ctk.CTkFont('Arial', size = 15))
+        item_name.pack(pady = (0, 10), padx = 10)
         
-        mini_dashboard_content_frame2 = ctk.CTkFrame(mini_dashboard_container, fg_color = 'transparent')
-        mini_dashboard_content_frame2.pack(side = 'left', padx =20, fill = 'y')
+        #item description
+        item_description_label_frame = ctk.CTkFrame(frame2, fg_color='transparent')
+        item_description_label_frame.pack(fill = 'x')
+        item_description_label = ctk.CTkLabel(item_description_label_frame, text = 'Description', font= ctk.CTkFont('Arial', size = 18))
+        item_description_label.pack(side = 'left', pady = (10,0), padx = 10)
         
-        content2 = ctk.CTkFrame(mini_dashboard_content_frame2, height=100, width=300, corner_radius=15 )
-        content2.pack(fill = 'y')
-        content2_label = ctk.CTkLabel(content2, text="No. of Transfers", height=100, width=300, anchor="nw", font= ctk.CTkFont('Arial', size = 22, weight = "bold"))
-        content2_label.pack(pady = (10,0), padx = (10,0))
+        item_description = ctk.CTkEntry(frame2, width=250, font= ctk.CTkFont('Arial', size = 15))
+        item_description.pack(pady = (0, 10), padx = 10)
         
-        mini_dashboard_content_frame3 = ctk.CTkFrame(mini_dashboard_container, fg_color = 'transparent')
-        mini_dashboard_content_frame3.pack(side = 'left', padx =20,fill = 'y')
+        #item location
+        item_loc_label_frame = ctk.CTkFrame(frame2, fg_color='transparent')
+        item_loc_label_frame.pack(fill = 'x')
+        item_loc_label = ctk.CTkLabel(item_loc_label_frame, text = 'Location', font= ctk.CTkFont('Arial', size = 18))
+        item_loc_label.pack(side = 'left', pady = (10,0), padx = 10)
         
-        content3 = ctk.CTkFrame(mini_dashboard_content_frame3, height=100, width=300, corner_radius=15)
-        content3.pack(fill = 'y')
-        content3_label = ctk.CTkLabel(content3, text="No. of Users", height=100, width=300, anchor="nw", font= ctk.CTkFont('Arial', size = 22, weight = "bold"))
-        content3_label.pack(pady = (10,0), padx = (10,0))
+        loc_options = ["Computer Laboratory 1", "Computer Laboratory 2", "Computer Laboratory 3"]
+        item_loc = ctk.CTkOptionMenu(frame2, width=250, values=loc_options, fg_color= 'white', text_color='black', dropdown_fg_color='white', font= ctk.CTkFont('Arial', size = 15))
+        item_loc.pack(pady = (0, 10), padx = 10)
         
-
-items_window = items_window()
-items_window.mainloop()
+        #item quantity
+        item_quantity_label_frame = ctk.CTkFrame(frame2, fg_color='transparent')
+        item_quantity_label_frame.pack(fill = 'x')
+        item_quantity_label = ctk.CTkLabel(item_quantity_label_frame, text = 'Quantity', font= ctk.CTkFont('Arial', size = 18))
+        item_quantity_label.pack(side = 'left', pady = (10,0), padx = 10)
+        
+        item_quantity = tk.Spinbox(frame2, from_= 0, to= 1000, borderwidth=2, width=250, font= ctk.CTkFont('Arial', size = 15))
+        item_quantity.pack(pady = (0, 10), padx = 10)
+        
+        #add button
+        add_button = ctk.CTkButton(frame2, text = 'Add', font= ctk.CTkFont('Arial', size = 18, weight = "bold"), text_color='white', corner_radius = 30)
+        add_button.pack(pady = 35, ipady = 5)
 
