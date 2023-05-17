@@ -1,3 +1,12 @@
+import tkinter as tk
+from tkinter import ttk
+import customtkinter as ctk
+from tkinter.messagebox import showinfo
+from PIL import Image
+import tkcalendar
+
+ctk.set_appearance_mode("system")  # Modes: system (default), light, dark
+
 class items_window(ctk.CTkToplevel):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -84,3 +93,5 @@ class items_window(ctk.CTkToplevel):
         add_button = ctk.CTkButton(frame2, text = 'Add', font= ctk.CTkFont('Arial', size = 18, weight = "bold"), text_color='white', corner_radius = 30)
         add_button.pack(pady = 35, ipady = 5)
 
+items_window = items_window()
+items_window.mainloop()
