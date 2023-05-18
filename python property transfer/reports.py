@@ -38,7 +38,7 @@ class report_window(ctk.CTkToplevel):
         frame = ctk.CTkFrame(self, height=400, corner_radius=20)
         frame.pack(fill = 'both', pady = 5, padx = 15)
         
-        sub_frame = ctk.CTkFrame(frame)
+        sub_frame = ctk.CTkFrame(frame, fg_color='transparent')
         sub_frame.pack(fill = 'x')
         
         entity_label = ctk.CTkLabel(sub_frame, text='Entity Name: ')
@@ -53,7 +53,7 @@ class report_window(ctk.CTkToplevel):
         fund_cluster= ctk.CTkEntry(sub_frame)
         fund_cluster.pack(side = 'left', pady = 5, padx = 10)
         
-        sub_frame2 = ctk.CTkFrame(frame)
+        sub_frame2 = ctk.CTkFrame(frame, fg_color='transparent')
         sub_frame2.pack(fill = 'x')
         
         from_label = ctk.CTkLabel(sub_frame2, text='From Accountable Officer/Agency Cluster Fund: ')
@@ -66,7 +66,7 @@ class report_window(ctk.CTkToplevel):
         ptr_no = ctk.CTkEntry(sub_frame2)
         ptr_no.pack(side = 'left', pady = 5, padx = 10)
         
-        sub_frame3 = ctk.CTkFrame(frame)
+        sub_frame3 = ctk.CTkFrame(frame, fg_color='transparent')
         sub_frame3.pack(fill = 'x')
         
         to_label = ctk.CTkLabel(sub_frame3, text='To Accountable Officer/Agency Cluster Fund: ')
@@ -82,7 +82,7 @@ class report_window(ctk.CTkToplevel):
         frame2 = ctk.CTkFrame(self, corner_radius=20)
         frame2.pack(fill = 'both', pady = 5, padx = 15)
         
-        sub_frame4 = ctk.CTkFrame(frame2)
+        sub_frame4 = ctk.CTkFrame(frame2, fg_color='transparent')
         sub_frame4.pack(fill = 'x')
         
         transfer_type_label = ctk.CTkLabel(sub_frame4, text='Transfer Type (Select Only One): ')
@@ -107,7 +107,7 @@ class report_window(ctk.CTkToplevel):
         frame4 = ctk.CTkFrame(self)
         frame4.pack(fill = 'both', pady = 5, padx = (15, 0), side = 'left')
         
-        sub_frame5 = ctk.CTkFrame(frame4)
+        sub_frame5 = ctk.CTkFrame(frame4, fg_color='transparent')
         sub_frame5.pack(fill = 'x')
         reason_label = ctk.CTkLabel(sub_frame5, text = 'Reasons for Transfer: ')
         reason_label.pack(side = 'left', pady = 5, padx = 10)
@@ -119,7 +119,7 @@ class report_window(ctk.CTkToplevel):
         frame5.pack(fill = 'both', pady = 5, padx = 15, side = 'left')
         
         #approved by
-        sub_frame6 = ctk.CTkFrame(frame5)
+        sub_frame6 = ctk.CTkFrame(frame5, fg_color='transparent')
         sub_frame6.pack(fill = 'x')
         
         approved_by_label = ctk.CTkLabel(sub_frame6, text = 'Approved by: ')
@@ -135,7 +135,7 @@ class report_window(ctk.CTkToplevel):
         approve_designation = ctk.CTkEntry(sub_frame6)
         approve_designation.pack(side = 'left', pady = 3, padx = 10)
         
-        sub_frame6_2 = ctk.CTkFrame(frame5)
+        sub_frame6_2 = ctk.CTkFrame(frame5, fg_color='transparent')
         sub_frame6_2.pack(fill = 'x')
         
         approve_date_label = ctk.CTkLabel(sub_frame6_2, text = 'Date: ')
@@ -145,7 +145,7 @@ class report_window(ctk.CTkToplevel):
         
         
         #Released/issued by
-        sub_frame7 = ctk.CTkFrame(frame5)
+        sub_frame7 = ctk.CTkFrame(frame5, fg_color='transparent')
         sub_frame7.pack(fill = 'x')
         
         released_by_label = ctk.CTkLabel(sub_frame7, text = 'Released/Issued by: ')
@@ -161,7 +161,7 @@ class report_window(ctk.CTkToplevel):
         release_designation = ctk.CTkEntry(sub_frame7)
         release_designation.pack(side = 'left', pady = 3, padx = 10)
         
-        sub_frame7_2 = ctk.CTkFrame(frame5)
+        sub_frame7_2 = ctk.CTkFrame(frame5, fg_color='transparent')
         sub_frame7_2.pack(fill = 'x')
         
         release_date_label = ctk.CTkLabel(sub_frame7_2, text = 'Date: ')
@@ -170,7 +170,7 @@ class report_window(ctk.CTkToplevel):
         release_date.pack(side = 'left', pady = 3, padx = 10)
         
         #receive by
-        sub_frame8 = ctk.CTkFrame(frame5)
+        sub_frame8 = ctk.CTkFrame(frame5, fg_color='transparent')
         sub_frame8.pack(fill = 'x')
         
         received_by_label = ctk.CTkLabel(sub_frame8, text = 'Received by: ')
@@ -186,7 +186,7 @@ class report_window(ctk.CTkToplevel):
         receive_designation = ctk.CTkEntry(sub_frame8)
         receive_designation.pack(side = 'left', pady = 2, padx = 10)
         
-        sub_frame8_2 = ctk.CTkFrame(frame5)
+        sub_frame8_2 = ctk.CTkFrame(frame5, fg_color='transparent')
         sub_frame8_2.pack(fill = 'x')
         
         receive_date_label = ctk.CTkLabel(sub_frame8_2, text = 'Date: ')
@@ -196,3 +196,4 @@ class report_window(ctk.CTkToplevel):
         
         gen_report = ctk.CTkButton(self, text = 'Generate Report', font= ctk.CTkFont('Arial', size = 12, weight = "bold"), text_color='white', corner_radius = 30)
         gen_report.pack(side = 'right', pady = 0, padx = (0, 15), ipady = 5)
+        
