@@ -82,6 +82,7 @@ class report_window(ctk.CTk):
         date = DateEntry(sub_frame3, font= ctk.CTkFont('Arial', size = 15) )
         date.pack(side = 'left', pady = 5, padx = 10, ipady =2, ipadx = 2)
         
+        #transfer types
         frame2 = ctk.CTkFrame(self_scroll_frame, corner_radius=20, fg_color='#F4F4F4')
         frame2.pack(fill = 'both', pady = 5, padx = 15)
         
@@ -104,10 +105,18 @@ class report_window(ctk.CTk):
         transfer_4.pack(side = 'left', pady = 5, padx = 10)
         transfer_4_2.pack(side = 'left', pady = 5, padx = 10)
         
-        frame3 = ctk.CTkScrollableFrame(self_scroll_frame)
+        #items
+        frame3 = ctk.CTkScrollableFrame(self_scroll_frame, height = 350)
         frame3.pack(fill = 'both', pady = 5, padx = 15)
         
+        sub_frame4_3 = ctk.CTkFrame(frame3)
+        sub_frame4_3.pack(fill = 'x')
         
+        item_label = ctk.CTkLabel(sub_frame4_3, text='Items')
+        item_label.pack(side = 'left', pady = 5, padx = 10)
+    
+        
+        #reasons
         frame4 = ctk.CTkFrame(self_scroll_frame)
         frame4.pack(fill = 'both', pady = 5, padx = 15)
         
@@ -134,12 +143,12 @@ class report_window(ctk.CTk):
         
         name_label = ctk.CTkLabel(sub_frame6_2, text = 'Printed Name: ')
         name_label.pack(side = 'left', pady = 3, padx = 10)
-        approve_name = ctk.CTkEntry(sub_frame6_2)
+        approve_name = ctk.CTkEntry(sub_frame6_2, width = 300)
         approve_name.pack(side = 'left', pady = 3, padx = 10)
         
         designation_label = ctk.CTkLabel(sub_frame6_2, text = 'Designation: ')
         designation_label.pack(side = 'left', pady = 3, padx = 10)
-        approve_designation = ctk.CTkEntry(sub_frame6_2)
+        approve_designation = ctk.CTkEntry(sub_frame6_2, width = 200)
         approve_designation.pack(side = 'left', pady = 3, padx = 10)
         
         approve_date_label = ctk.CTkLabel(sub_frame6_2, text = 'Date: ')
@@ -162,12 +171,12 @@ class report_window(ctk.CTk):
         
         name_label = ctk.CTkLabel(sub_frame7_2, text = 'Printed Name: ')
         name_label.pack(side = 'left', pady = 3, padx = 10)
-        release_name = ctk.CTkEntry(sub_frame7_2)
+        release_name = ctk.CTkEntry(sub_frame7_2, width = 300)
         release_name.pack(side = 'left', pady = 3, padx = 10)
         
         designation_label = ctk.CTkLabel(sub_frame7_2, text = 'Designation: ')
         designation_label.pack(side = 'left', pady = 3, padx = 10)
-        release_designation = ctk.CTkEntry(sub_frame7_2)
+        release_designation = ctk.CTkEntry(sub_frame7_2, width = 200)
         release_designation.pack(side = 'left', pady = 3, padx = 10)
         
         release_date_label = ctk.CTkLabel(sub_frame7_2, text = 'Date: ')
@@ -190,12 +199,12 @@ class report_window(ctk.CTk):
         
         name_label = ctk.CTkLabel(sub_frame8_2, text = 'Printed Name: ')
         name_label.pack(side = 'left', pady = 2, padx = 10)
-        receive_name = ctk.CTkEntry(sub_frame8_2)
+        receive_name = ctk.CTkEntry(sub_frame8_2, width = 300)
         receive_name.pack(side = 'left', pady = 2, padx = 10)
         
         designation_label = ctk.CTkLabel(sub_frame8_2, text = 'Designation: ')
         designation_label.pack(side = 'left', pady = 2, padx = 10)
-        receive_designation = ctk.CTkEntry(sub_frame8_2)
+        receive_designation = ctk.CTkEntry(sub_frame8_2, width= 200)
         receive_designation.pack(side = 'left', pady = 2, padx = 10)
         
         receive_date_label = ctk.CTkLabel(sub_frame8_2, text = 'Date: ')
@@ -205,5 +214,6 @@ class report_window(ctk.CTk):
         
         gen_report = ctk.CTkButton(self, text = 'Generate Report', font= ctk.CTkFont('Arial', size = 15, weight = "bold"), text_color='white', corner_radius = 30)
         gen_report.pack(side = 'right', pady = 0, padx = (0, 15), ipady = 5)
+        
 report_window= report_window()
 report_window.mainloop()

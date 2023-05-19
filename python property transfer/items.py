@@ -7,7 +7,7 @@ import tkcalendar
 
 ctk.set_appearance_mode("system")  # Modes: system (default), light, dark
 
-class items_window(ctk.CTkToplevel):
+class items_window(ctk.CTk):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.title("Property Transfer | Items")
@@ -40,7 +40,7 @@ class items_window(ctk.CTkToplevel):
         frame.pack(fill = 'both', side = 'left', padx = 15, pady = 15)
         
         #for input
-        frame2 = ctk.CTkFrame(self, width = 300, fg_color='#f2f2f2', corner_radius=20)
+        frame2 = ctk.CTkFrame(self, width = 300, fg_color='#f5f7f7', corner_radius=20)
         frame2.pack(fill = 'both', side = 'left', padx = (0,15), pady = 15)
         
         #item no.
@@ -73,12 +73,15 @@ class items_window(ctk.CTkToplevel):
         #item location
         item_loc_label_frame = ctk.CTkFrame(frame2, fg_color='transparent')
         item_loc_label_frame.pack(fill = 'x')
-        item_loc_label = ctk.CTkLabel(item_loc_label_frame, text = 'Location', font= ctk.CTkFont('Arial', size = 18))
+        item_loc_label = ctk.CTkLabel(item_loc_label_frame, text = 'Current Location', font= ctk.CTkFont('Arial', size = 18))
         item_loc_label.pack(side = 'left', pady = (10,0), padx = 10)
         
-        loc_options = ["Computer Laboratory 1", "Computer Laboratory 2", "Computer Laboratory 3"]
-        item_loc = ctk.CTkOptionMenu(frame2, width=250, values=loc_options, fg_color= 'white', text_color='black', dropdown_fg_color='white', font= ctk.CTkFont('Arial', size = 15))
-        item_loc.pack(pady = (0, 10), padx = 10)
+        loc_options_buildings = ["Computer Laboratory", "Administration Building", "Yumul Building"]
+        item_loc_buildings = ctk.CTkOptionMenu(frame2, width=250, values=loc_options_buildings, fg_color= 'white', text_color='black', dropdown_fg_color='white', font= ctk.CTkFont('Arial', size = 15), dropdown_font=ctk.CTkFont('Arial', size = 15))
+        item_loc_buildings.pack(pady = (0, 10), padx = 10)
+        loc_options_room = ["CL 1", "CL 2", "CL 3"]
+        item_loc_room = ctk.CTkOptionMenu(frame2, width=250, values=loc_options_room, fg_color= 'white', text_color='black', dropdown_fg_color='white', font= ctk.CTkFont('Arial', size = 15), dropdown_font=ctk.CTkFont('Arial', size = 15))
+        item_loc_room.pack(pady = (0, 10), padx = 10)
         
         #item quantity
         item_quantity_label_frame = ctk.CTkFrame(frame2, fg_color='transparent')
@@ -86,12 +89,12 @@ class items_window(ctk.CTkToplevel):
         item_quantity_label = ctk.CTkLabel(item_quantity_label_frame, text = 'Quantity', font= ctk.CTkFont('Arial', size = 18))
         item_quantity_label.pack(side = 'left', pady = (10,0), padx = 10)
         
-        item_quantity = tk.Spinbox(frame2, from_= 0, to= 1000, borderwidth=2, width=250, font= ctk.CTkFont('Arial', size = 15))
+        item_quantity = tk.Spinbox(frame2, from_= 0, to= 1000, borderwidth=2, width=250, font= ctk.CTkFont('Arial', size = 16))
         item_quantity.pack(pady = (0, 10), padx = 10)
         
         #add button
         add_button = ctk.CTkButton(frame2, text = 'Add', font= ctk.CTkFont('Arial', size = 18, weight = "bold"), text_color='white', corner_radius = 30)
-        add_button.pack(pady = 35, ipady = 5)
-
+        add_button.pack(pady = 20, ipady = 5)
+        
 items_window = items_window()
 items_window.mainloop()
