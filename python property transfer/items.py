@@ -4,6 +4,7 @@ import customtkinter as ctk
 from tkinter.messagebox import showinfo
 from PIL import Image
 import tkcalendar
+from ttkthemes import ThemedStyle
 
 ctk.set_appearance_mode("system")  # Modes: system (default), light, dark
 
@@ -15,8 +16,10 @@ class items_window(ctk.CTk):
         self.resizable(False, False)
         self.configure(fg_color = 'white')
         self.iconbitmap('python property transfer\images\icons8-data-transfer-483.ico')
-    
 
+        s = ThemedStyle(self)
+        s.theme_use('breeze')
+        
         #header frame
         header_frame = ctk.CTkFrame(self, fg_color='#313131', height=50, width=self.winfo_width(), corner_radius=0)
         header_frame.pack(fill = 'both', side='top')
@@ -39,6 +42,21 @@ class items_window(ctk.CTk):
         frame = ctk.CTkFrame(self, width = 700)
         frame.pack(fill = 'both', side = 'left', padx = 15, pady = 15)
         
+        columns = ('property_no', 'name', 'description', 'current_loc')
+        
+        item_table = ttk.Treeview(frame, columns=columns, show='headings', height=24)
+        item_table.pack(fill=tk.BOTH)
+        
+        item_table.column('property_no', width=175)
+        item_table.column('name', width=175)
+        item_table.column('description', width=175)
+        item_table.column('current_loc', width=175)
+        
+        item_table.heading('property_no', text='Property No.')
+        item_table.heading('name', text='Name')
+        item_table.heading('description', text='Description')
+        item_table.heading('current_loc', text='Current Location')
+        
         #for input
         frame2 = ctk.CTkFrame(self, width = 300, fg_color='#f5f7f7', corner_radius=20)
         frame2.pack(fill = 'both', side = 'left', padx = (0,15), pady = 15)
@@ -49,7 +67,7 @@ class items_window(ctk.CTk):
         item_no_label = ctk.CTkLabel(item_no_label_frame, text = 'Property No.', font= ctk.CTkFont('Arial', size = 18))
         item_no_label.pack(side = 'left', pady = (10,0), padx = 10)
         
-        item_no = ctk.CTkEntry(frame2, width=250, font= ctk.CTkFont('Arial', size = 15))
+        item_no = ctk.CTkEntry(frame2, width=250, font= ctk.CTkFont('Arial', size = 15), fg_color='white')
         item_no.pack(pady = (0, 10), padx = 10)
         
         #item name
@@ -58,7 +76,7 @@ class items_window(ctk.CTk):
         item_name_label = ctk.CTkLabel(item_name_label_frame, text = 'Name', font= ctk.CTkFont('Arial', size = 18))
         item_name_label.pack(side = 'left', pady = (10,0), padx = 10)
         
-        item_name = ctk.CTkEntry(frame2, width=250, font= ctk.CTkFont('Arial', size = 15))
+        item_name = ctk.CTkEntry(frame2, width=250, font= ctk.CTkFont('Arial', size = 15), fg_color='white')
         item_name.pack(pady = (0, 10), padx = 10)
         
         #item description
@@ -67,7 +85,7 @@ class items_window(ctk.CTk):
         item_description_label = ctk.CTkLabel(item_description_label_frame, text = 'Description', font= ctk.CTkFont('Arial', size = 18))
         item_description_label.pack(side = 'left', pady = (10,0), padx = 10)
         
-        item_description = ctk.CTkEntry(frame2, width=250, font= ctk.CTkFont('Arial', size = 15))
+        item_description = ctk.CTkEntry(frame2, width=250, font= ctk.CTkFont('Arial', size = 15), fg_color='white')
         item_description.pack(pady = (0, 10), padx = 10)
         
         #item location
@@ -89,7 +107,7 @@ class items_window(ctk.CTk):
         item_quantity_label = ctk.CTkLabel(item_quantity_label_frame, text = 'Quantity', font= ctk.CTkFont('Arial', size = 18))
         item_quantity_label.pack(side = 'left', pady = (10,0), padx = 10)
         
-        item_quantity = tk.Spinbox(frame2, from_= 0, to= 1000, borderwidth=2, width=250, font= ctk.CTkFont('Arial', size = 16))
+        item_quantity = tk.Spinbox(frame2, from_= 0, to= 1000, borderwidth=2, width=250, font= ctk.CTkFont('Arial', size = 16), bg='white')
         item_quantity.pack(pady = (0, 10), padx = 10)
         
         #add button
