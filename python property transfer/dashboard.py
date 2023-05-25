@@ -4,7 +4,7 @@ import customtkinter as ctk
 from tkinter.messagebox import showinfo
 from PIL import Image
 from tkcalendar import *
-
+from ttkthemes import ThemedStyle
 
 ctk.set_appearance_mode("system")  # Modes: system (default), light, dark
 
@@ -72,12 +72,15 @@ class report_window(ctk.CTkToplevel):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.title("Property Transfer | Report")
-        self.geometry("{0}x{1}+200+5".format(1050, 690))
+        self.geometry("{0}x{1}+170+5".format(1050, 690))
         self.resizable(False, False)
         self.configure(fg_color = 'white')
         self.iconbitmap('python property transfer\images\icons8-data-transfer-483.ico')
-    
 
+        
+        s = ThemedStyle(self)
+        s.theme_use('breeze')
+        
         #header frame
         header_frame = ctk.CTkFrame(self, fg_color='#313131', height=50, width=self.winfo_width(), corner_radius=0)
         header_frame.pack(fill = 'both', side='top')
@@ -96,7 +99,10 @@ class report_window(ctk.CTkToplevel):
         label = ctk.CTkLabel(header_frame, text = 'Reports', font= ctk.CTkFont('Arial', size = 25, weight = "bold"), text_color='white')
         label.pack(side = 'right',  pady = 15, padx = 15)
 
-        frame = ctk.CTkFrame(self, height=400, corner_radius=20)
+        self_scroll_frame = ctk.CTkScrollableFrame(self, fg_color='white', height=560)
+        self_scroll_frame.pack(fill = 'both')
+        
+        frame = ctk.CTkFrame(self_scroll_frame, height=400, corner_radius=20, fg_color='#F4F4F4')
         frame.pack(fill = 'both', pady = 5, padx = 15)
         
         sub_frame = ctk.CTkFrame(frame, fg_color='transparent')
@@ -110,8 +116,8 @@ class report_window(ctk.CTkToplevel):
         entity_name.pack(side = 'left', pady = 5, padx = 10)
         
         fund_cluster_label = ctk.CTkLabel(sub_frame, text='Fund Cluster: ')
-        fund_cluster_label.pack(side = 'left', pady = 5, padx = 10)
-        fund_cluster= ctk.CTkEntry(sub_frame)
+        fund_cluster_label.pack(side = 'left', pady = 5, padx = (170,0))
+        fund_cluster= ctk.CTkEntry(sub_frame, fg_color='white')
         fund_cluster.pack(side = 'left', pady = 5, padx = 10)
         
         sub_frame2 = ctk.CTkFrame(frame, fg_color='transparent')
@@ -119,12 +125,12 @@ class report_window(ctk.CTkToplevel):
         
         from_label = ctk.CTkLabel(sub_frame2, text='From Accountable Officer/Agency Cluster Fund: ')
         from_label.pack(side = 'left', pady = 5, padx = 10)
-        from_ao_afc = ctk.CTkEntry(sub_frame2, width = 300)
+        from_ao_afc = ctk.CTkEntry(sub_frame2, width = 300, fg_color='white')
         from_ao_afc.pack(side = 'left', pady = 5, padx = 10)
         
         ptr_label = ctk.CTkLabel(sub_frame2, text='PTR No.: ')
         ptr_label.pack(side = 'left', pady = 5, padx = 10)
-        ptr_no = ctk.CTkEntry(sub_frame2)
+        ptr_no = ctk.CTkEntry(sub_frame2, fg_color='white', width = 155)
         ptr_no.pack(side = 'left', pady = 5, padx = 10)
         
         sub_frame3 = ctk.CTkFrame(frame, fg_color='transparent')
@@ -132,15 +138,16 @@ class report_window(ctk.CTkToplevel):
         
         to_label = ctk.CTkLabel(sub_frame3, text='To Accountable Officer/Agency Cluster Fund: ')
         to_label.pack(side = 'left', pady = 5, padx = 10)
-        to_ao_afc = ctk.CTkEntry(sub_frame3, width = 300)
+        to_ao_afc = ctk.CTkEntry(sub_frame3, width = 300, fg_color='white')
         to_ao_afc.pack(side = 'left', pady = 5, padx = 10)
         
         date_label = ctk.CTkLabel(sub_frame3, text='Date: ')
-        date_label.pack(side = 'left', pady = 5, padx = 10)
+        date_label.pack(side = 'left', pady = 5, padx = 24)
         date = DateEntry(sub_frame3, font= ctk.CTkFont('Arial', size = 15) )
         date.pack(side = 'left', pady = 5, padx = 10, ipady =2, ipadx = 2)
         
-        frame2 = ctk.CTkFrame(self, corner_radius=20)
+        #transfer types
+        frame2 = ctk.CTkFrame(self_scroll_frame, corner_radius=20, fg_color='#F4F4F4')
         frame2.pack(fill = 'both', pady = 5, padx = 15)
         
         sub_frame4 = ctk.CTkFrame(frame2, fg_color='transparent')
@@ -158,105 +165,165 @@ class report_window(ctk.CTkToplevel):
         transfer_3.pack(side = 'left', pady = 5, padx = 10)
         
         transfer_4 = ctk.CTkCheckBox(sub_frame4, text='Others (Specify): ')
-        transfer_4_2 = ctk.CTkEntry(sub_frame4)
+        transfer_4_2 = ctk.CTkEntry(sub_frame4, fg_color='white')
         transfer_4.pack(side = 'left', pady = 5, padx = 10)
         transfer_4_2.pack(side = 'left', pady = 5, padx = 10)
         
-        frame3 = ctk.CTkScrollableFrame(self)
+        #items
+        frame3 = ctk.CTkFrame(self_scroll_frame,  fg_color='#F4F4F4')
         frame3.pack(fill = 'both', pady = 5, padx = 15)
         
-        frame4 = ctk.CTkFrame(self)
-        frame4.pack(fill = 'both', pady = 5, padx = (15, 0), side = 'left')
+        sub_frame4_3 = ctk.CTkFrame(frame3, fg_color='#F4F4F4')
+        sub_frame4_3.pack(fill = 'x')
+        
+        item_label = ctk.CTkLabel(sub_frame4_3, text='Items')
+        item_label.pack(side = 'left', pady = 5, padx = 10)
+
+        #search item by property number
+        search_icon = ctk.CTkImage(Image.open('python property transfer\images\icons8-search-150.png'), size=(25, 25))
+        search_button = ctk.CTkButton(sub_frame4_3, image=search_icon, text=None, width = 25, fg_color='transparent')
+        search_button.pack(side = 'right', padx = (5, 10))
+        property_no = ctk.CTkEntry(sub_frame4_3, placeholder_text='Property Number', width = 200, fg_color='white')
+        property_no.pack(side = 'right')
+        
+        #result of search
+        sub_frame4_4 = ctk.CTkFrame(frame3, fg_color='#F4F4F4')
+        sub_frame4_4.pack(fill = 'x', pady = 20)
+        
+        result_label = ctk.CTkLabel(sub_frame4_4, text='Result: ')
+        result_label.pack(side = 'left', pady = 5, padx = 10)
+        result_property_no = ctk.CTkEntry(sub_frame4_4, placeholder_text='Property Number', width = 170, fg_color='white')
+        result_property_no.pack(side = 'left', pady = 5, padx = 10)
+        result_name = ctk.CTkEntry(sub_frame4_4, placeholder_text='Name', width = 170, fg_color='white')
+        result_name.pack(side = 'left', pady = 5, padx = 10)
+        result_desc = ctk.CTkEntry(sub_frame4_4, placeholder_text='Description', width = 170, fg_color='white')
+        result_desc.pack(side = 'left', pady = 5, padx = 10)
+        quantity = tk.Spinbox(sub_frame4_4, from_= 0, to= 1000, borderwidth=1, font= ctk.CTkFont('Arial', size = 16), bg='white')
+        quantity.pack(side = 'left', pady = 5, padx= 10)
+        add_button = ctk.CTkButton(sub_frame4_4, text='Add', width = 60, font=ctk.CTkFont('Arial', weight='bold'))
+        add_button.pack(side = 'left', pady = 5, padx = 10)
+        
+        #item table
+        
+        sub_frame4_5 = ctk.CTkFrame(self_scroll_frame, fg_color='#F4F4F4')
+        sub_frame4_5.pack(fill = 'x', pady = 5, padx = 15)
+        
+        columns = ('date_acquired', 'property_no', 'name',  'description', 'quantity', 'condition')
+        
+        item_table_report = ttk.Treeview(sub_frame4_5, columns=columns, show='headings', height=15)
+        item_table_report.pack(fill=tk.BOTH)
+        
+        item_table_report.column('date_acquired', width = 100)
+        item_table_report.column('property_no', width = 100)
+        item_table_report.column('name', width = 100)
+        item_table_report.column('description', width = 100)
+        item_table_report.column('quantity', width = 100)
+        item_table_report.column('condition', width = 100)
+        
+        item_table_report.heading('date_acquired', text='Date Acquired')
+        item_table_report.heading('property_no', text='Property No.')
+        item_table_report.heading('name', text='Name')
+        item_table_report.heading('quantity', text='Quantity')
+        item_table_report.heading('condition', text='Condition')
+        
+        #reasons
+        frame4 = ctk.CTkFrame(self_scroll_frame)
+        frame4.pack(fill = 'both', pady = 5, padx = 15)
         
         sub_frame5 = ctk.CTkFrame(frame4, fg_color='transparent')
         sub_frame5.pack(fill = 'x')
         reason_label = ctk.CTkLabel(sub_frame5, text = 'Reasons for Transfer: ')
         reason_label.pack(side = 'left', pady = 5, padx = 10)
         
-        reasons = ctk.CTkTextbox(frame4, width= 200)
-        reasons.pack(fill = 'both', pady = 2, padx = 5)
-        
-        frame5 = ctk.CTkFrame(self)
-        frame5.pack(fill = 'both', pady = 5, padx = 15, side = 'left')
+        reasons = ctk.CTkTextbox(frame4, height=100, fg_color='white')
+        reasons.pack(fill = 'both', pady = 10, padx = 10)
         
         #approved by
+        frame5 = ctk.CTkFrame(self_scroll_frame, fg_color='#F4F4F4')
+        frame5.pack(fill = 'both', pady = 5, padx = 15)
+       
         sub_frame6 = ctk.CTkFrame(frame5, fg_color='transparent')
         sub_frame6.pack(fill = 'x')
         
         approved_by_label = ctk.CTkLabel(sub_frame6, text = 'Approved by: ')
         approved_by_label.pack(side = 'left', pady = 3, padx = 10)
         
-        name_label = ctk.CTkLabel(sub_frame6, text = 'Printed Name: ')
-        name_label.pack(side = 'left', pady = 3, padx = 10)
-        approve_name = ctk.CTkEntry(sub_frame6)
-        approve_name.pack(side = 'left', pady = 3, padx = 10)
-        
-        designation_label = ctk.CTkLabel(sub_frame6, text = 'Designation: ')
-        designation_label.pack(side = 'left', pady = 3, padx = 10)
-        approve_designation = ctk.CTkEntry(sub_frame6)
-        approve_designation.pack(side = 'left', pady = 3, padx = 10)
-        
         sub_frame6_2 = ctk.CTkFrame(frame5, fg_color='transparent')
         sub_frame6_2.pack(fill = 'x')
         
+        name_label = ctk.CTkLabel(sub_frame6_2, text = 'Printed Name: ')
+        name_label.pack(side = 'left', pady = 3, padx = 10)
+        approve_name = ctk.CTkEntry(sub_frame6_2, width = 300, fg_color='white')
+        approve_name.pack(side = 'left', pady = 3, padx = 10)
+        
+        designation_label = ctk.CTkLabel(sub_frame6_2, text = 'Designation: ')
+        designation_label.pack(side = 'left', pady = 3, padx = 10)
+        approve_designation = ctk.CTkEntry(sub_frame6_2, width = 200, fg_color='white')
+        approve_designation.pack(side = 'left', pady = 3, padx = 10)
+        
         approve_date_label = ctk.CTkLabel(sub_frame6_2, text = 'Date: ')
-        approve_date_label.pack(side = 'left', pady = 3, padx = (105, 0))
+        approve_date_label.pack(side = 'left', pady = 3, padx = 10)
         approve_date = DateEntry(sub_frame6_2, font= ctk.CTkFont('Arial', size = 12) )
         approve_date.pack(side = 'left', pady = 3, padx = 10)
         
-        
         #Released/issued by
-        sub_frame7 = ctk.CTkFrame(frame5, fg_color='transparent')
+        frame6 = ctk.CTkFrame(self_scroll_frame, fg_color='#F4F4F4')
+        frame6.pack(fill = 'both', pady = 5, padx = 15) 
+        
+        sub_frame7 = ctk.CTkFrame(frame6, fg_color='transparent')
         sub_frame7.pack(fill = 'x')
         
         released_by_label = ctk.CTkLabel(sub_frame7, text = 'Released/Issued by: ')
         released_by_label.pack(side = 'left', pady = 3, padx = 10)
         
-        name_label = ctk.CTkLabel(sub_frame7, text = 'Printed Name: ')
-        name_label.pack(side = 'left', pady = 3, padx = 10)
-        release_name = ctk.CTkEntry(sub_frame7)
-        release_name.pack(side = 'left', pady = 3, padx = 10)
-        
-        designation_label = ctk.CTkLabel(sub_frame7, text = 'Designation: ')
-        designation_label.pack(side = 'left', pady = 3, padx = 10)
-        release_designation = ctk.CTkEntry(sub_frame7)
-        release_designation.pack(side = 'left', pady = 3, padx = 10)
-        
-        sub_frame7_2 = ctk.CTkFrame(frame5, fg_color='transparent')
+        sub_frame7_2 = ctk.CTkFrame(frame6, fg_color='transparent')
         sub_frame7_2.pack(fill = 'x')
         
+        name_label = ctk.CTkLabel(sub_frame7_2, text = 'Printed Name: ')
+        name_label.pack(side = 'left', pady = 3, padx = 10)
+        release_name = ctk.CTkEntry(sub_frame7_2, width = 300, fg_color='white')
+        release_name.pack(side = 'left', pady = 3, padx = 10)
+        
+        designation_label = ctk.CTkLabel(sub_frame7_2, text = 'Designation: ')
+        designation_label.pack(side = 'left', pady = 3, padx = 10)
+        release_designation = ctk.CTkEntry(sub_frame7_2, width = 200, fg_color='white')
+        release_designation.pack(side = 'left', pady = 3, padx = 10)
+        
         release_date_label = ctk.CTkLabel(sub_frame7_2, text = 'Date: ')
-        release_date_label.pack(side = 'left', pady = 3, padx = (150, 0))
+        release_date_label.pack(side = 'left', pady = 3, padx = 10)
         release_date = DateEntry(sub_frame7_2, font= ctk.CTkFont('Arial', size = 12) )
         release_date.pack(side = 'left', pady = 3, padx = 10)
         
         #receive by
-        sub_frame8 = ctk.CTkFrame(frame5, fg_color='transparent')
+        frame7 = ctk.CTkFrame(self_scroll_frame, fg_color='#F4F4F4')
+        frame7.pack(fill = 'both', pady = 5, padx = 15) 
+        
+        sub_frame8 = ctk.CTkFrame(frame7, fg_color='transparent')
         sub_frame8.pack(fill = 'x')
         
         received_by_label = ctk.CTkLabel(sub_frame8, text = 'Received by: ')
         received_by_label.pack(side = 'left', pady = 5, padx = 10)
         
-        name_label = ctk.CTkLabel(sub_frame8, text = 'Printed Name: ')
-        name_label.pack(side = 'left', pady = 2, padx = 10)
-        receive_name = ctk.CTkEntry(sub_frame8)
-        receive_name.pack(side = 'left', pady = 2, padx = 10)
-        
-        designation_label = ctk.CTkLabel(sub_frame8, text = 'Designation: ')
-        designation_label.pack(side = 'left', pady = 2, padx = 10)
-        receive_designation = ctk.CTkEntry(sub_frame8)
-        receive_designation.pack(side = 'left', pady = 2, padx = 10)
-        
-        sub_frame8_2 = ctk.CTkFrame(frame5, fg_color='transparent')
+        sub_frame8_2 = ctk.CTkFrame(frame7, fg_color='transparent')
         sub_frame8_2.pack(fill = 'x')
         
+        name_label = ctk.CTkLabel(sub_frame8_2, text = 'Printed Name: ')
+        name_label.pack(side = 'left', pady = 2, padx = 10)
+        receive_name = ctk.CTkEntry(sub_frame8_2, width = 300, fg_color='white')
+        receive_name.pack(side = 'left', pady = 2, padx = 10)
+        
+        designation_label = ctk.CTkLabel(sub_frame8_2, text = 'Designation: ')
+        designation_label.pack(side = 'left', pady = 2, padx = 10)
+        receive_designation = ctk.CTkEntry(sub_frame8_2, width= 200, fg_color='white')
+        receive_designation.pack(side = 'left', pady = 2, padx = 10)
+        
         receive_date_label = ctk.CTkLabel(sub_frame8_2, text = 'Date: ')
-        receive_date_label.pack(side = 'left', pady = 5, padx = (150, 0))
+        receive_date_label.pack(side = 'left', pady = 5, padx = 10)
         receive_date = DateEntry(sub_frame8_2, font= ctk.CTkFont('Arial', size = 12) )
         receive_date.pack(side = 'left', pady = 2, padx = 10)
         
-        gen_report = ctk.CTkButton(self, text = 'Generate Report', font= ctk.CTkFont('Arial', size = 12, weight = "bold"), text_color='white', corner_radius = 30)
-        gen_report.pack(side = 'right', pady = 0, padx = (0, 15), ipady = 5)
+        gen_report = ctk.CTkButton(self, text = 'Generate Report', font= ctk.CTkFont('Arial', size = 17, weight = "bold"), text_color='white', corner_radius = 30)
+        gen_report.pack(side = 'right', pady = 0, padx = (0, 15), ipady = 3)
         
 #request window
 class request_window(ctk.CTkToplevel):
@@ -299,8 +366,10 @@ class items_window(ctk.CTkToplevel):
         self.resizable(False, False)
         self.configure(fg_color = 'white')
         self.iconbitmap('python property transfer\images\icons8-data-transfer-483.ico')
-    
 
+        s = ThemedStyle(self)
+        s.theme_use('breeze')
+        
         #header frame
         header_frame = ctk.CTkFrame(self, fg_color='#313131', height=50, width=self.winfo_width(), corner_radius=0)
         header_frame.pack(fill = 'both', side='top')
@@ -323,6 +392,21 @@ class items_window(ctk.CTkToplevel):
         frame = ctk.CTkFrame(self, width = 700)
         frame.pack(fill = 'both', side = 'left', padx = 15, pady = 15)
         
+        columns = ('property_no', 'name', 'description', 'current_loc')
+        
+        item_table = ttk.Treeview(frame, columns=columns, show='headings', height=24)
+        item_table.pack(fill=tk.BOTH)
+        
+        item_table.column('property_no', width=175)
+        item_table.column('name', width=175)
+        item_table.column('description', width=175)
+        item_table.column('current_loc', width=175)
+        
+        item_table.heading('property_no', text='Property No.')
+        item_table.heading('name', text='Name')
+        item_table.heading('description', text='Description')
+        item_table.heading('current_loc', text='Current Location')
+        
         #for input
         frame2 = ctk.CTkFrame(self, width = 300, fg_color='#f5f7f7', corner_radius=20)
         frame2.pack(fill = 'both', side = 'left', padx = (0,15), pady = 15)
@@ -333,7 +417,7 @@ class items_window(ctk.CTkToplevel):
         item_no_label = ctk.CTkLabel(item_no_label_frame, text = 'Property No.', font= ctk.CTkFont('Arial', size = 18))
         item_no_label.pack(side = 'left', pady = (10,0), padx = 10)
         
-        item_no = ctk.CTkEntry(frame2, width=250, font= ctk.CTkFont('Arial', size = 15))
+        item_no = ctk.CTkEntry(frame2, width=250, font= ctk.CTkFont('Arial', size = 15), fg_color='white')
         item_no.pack(pady = (0, 10), padx = 10)
         
         #item name
@@ -342,7 +426,7 @@ class items_window(ctk.CTkToplevel):
         item_name_label = ctk.CTkLabel(item_name_label_frame, text = 'Name', font= ctk.CTkFont('Arial', size = 18))
         item_name_label.pack(side = 'left', pady = (10,0), padx = 10)
         
-        item_name = ctk.CTkEntry(frame2, width=250, font= ctk.CTkFont('Arial', size = 15))
+        item_name = ctk.CTkEntry(frame2, width=250, font= ctk.CTkFont('Arial', size = 15), fg_color='white')
         item_name.pack(pady = (0, 10), padx = 10)
         
         #item description
@@ -351,7 +435,7 @@ class items_window(ctk.CTkToplevel):
         item_description_label = ctk.CTkLabel(item_description_label_frame, text = 'Description', font= ctk.CTkFont('Arial', size = 18))
         item_description_label.pack(side = 'left', pady = (10,0), padx = 10)
         
-        item_description = ctk.CTkEntry(frame2, width=250, font= ctk.CTkFont('Arial', size = 15))
+        item_description = ctk.CTkEntry(frame2, width=250, font= ctk.CTkFont('Arial', size = 15), fg_color='white')
         item_description.pack(pady = (0, 10), padx = 10)
         
         #item location
@@ -373,7 +457,7 @@ class items_window(ctk.CTkToplevel):
         item_quantity_label = ctk.CTkLabel(item_quantity_label_frame, text = 'Quantity', font= ctk.CTkFont('Arial', size = 18))
         item_quantity_label.pack(side = 'left', pady = (10,0), padx = 10)
         
-        item_quantity = tk.Spinbox(frame2, from_= 0, to= 1000, borderwidth=2, width=250, font= ctk.CTkFont('Arial', size = 16))
+        item_quantity = tk.Spinbox(frame2, from_= 0, to= 1000, borderwidth=2, width=250, font= ctk.CTkFont('Arial', size = 16), bg='white')
         item_quantity.pack(pady = (0, 10), padx = 10)
         
         #add button
