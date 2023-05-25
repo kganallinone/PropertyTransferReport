@@ -42,20 +42,22 @@ class items_window(ctk.CTk):
         frame = ctk.CTkFrame(self, width = 700)
         frame.pack(fill = 'both', side = 'left', padx = 15, pady = 15)
         
-        columns = ('property_no', 'name', 'description', 'current_loc')
+        columns = ('property_no', 'name', 'description', 'current_loc', 'quantity')
         
         item_table = ttk.Treeview(frame, columns=columns, show='headings', height=24)
         item_table.pack(fill=tk.BOTH)
         
-        item_table.column('property_no', width=175)
-        item_table.column('name', width=175)
-        item_table.column('description', width=175)
-        item_table.column('current_loc', width=175)
+        item_table.column('property_no', width=150)
+        item_table.column('name', width=150)
+        item_table.column('description', width=150)
+        item_table.column('current_loc', width=150)
+        item_table.column('quantity', width= 100)
         
         item_table.heading('property_no', text='Property No.')
         item_table.heading('name', text='Name')
         item_table.heading('description', text='Description')
         item_table.heading('current_loc', text='Current Location')
+        item_table.heading('quantity', text='Quantity')
         
         #for input
         frame2 = ctk.CTkFrame(self, width = 300, fg_color='#f5f7f7', corner_radius=20)
