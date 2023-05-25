@@ -96,11 +96,10 @@ class items_window(ctk.CTk):
         item_loc_label = ctk.CTkLabel(item_loc_label_frame, text = 'Current Location', font= ctk.CTkFont('Arial', size = 18))
         item_loc_label.pack(side = 'left', pady = (10,0), padx = 10)
         
-        loc_options_buildings = ["Computer Laboratory", "Administration Building", "Yumul Building"]
+        loc_options_buildings = ["Computer Laboratory 1", "Computer Laboratory 2", "Computer Laboratory 3", "Other"]
         item_loc_buildings = ctk.CTkOptionMenu(frame2, width=250, values=loc_options_buildings, fg_color= 'white', text_color='black', dropdown_fg_color='white', font= ctk.CTkFont('Arial', size = 15), dropdown_font=ctk.CTkFont('Arial', size = 15))
         item_loc_buildings.pack(pady = (0, 10), padx = 10)
-        loc_options_room = ["CL 1", "CL 2", "CL 3"]
-        item_loc_room = ctk.CTkOptionMenu(frame2, width=250, values=loc_options_room, fg_color= 'white', text_color='black', dropdown_fg_color='white', font= ctk.CTkFont('Arial', size = 15), dropdown_font=ctk.CTkFont('Arial', size = 15))
+        item_loc_room = ctk.CTkEntry(frame2, width=250, fg_color= 'white', font= ctk.CTkFont('Arial', size = 15), placeholder_text='Please Specify')
         item_loc_room.pack(pady = (0, 10), padx = 10)
         
         #item quantity
