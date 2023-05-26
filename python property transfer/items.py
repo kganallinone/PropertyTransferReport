@@ -112,7 +112,7 @@ class items_window(ctk.CTk):
         item_quantity.pack(pady = (0, 10), padx = 10)
         
         #add button
-        add_button = ctk.CTkButton(frame2, text = 'Add', font= ctk.CTkFont('Arial', size = 18, weight = "bold"), text_color='white', corner_radius = 30)
+        add_button = ctk.CTkButton(frame2, text = 'Add', font= ctk.CTkFont('Arial', size = 18, weight = "bold"), text_color='black', corner_radius = 30)
         add_button.pack(pady = 20, ipady = 5)
         
 items_window = items_window()
