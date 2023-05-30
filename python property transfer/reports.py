@@ -262,7 +262,7 @@ class report_window(ctk.CTk):
         receive_date = DateEntry(sub_frame8_2, font= ctk.CTkFont('Arial', size = 12) )
         receive_date.pack(side = 'left', pady = 2, padx = 10)
         
-        gen_report = ctk.CTkButton(self, text = 'Generate Report', font= ctk.CTkFont('Arial', size = 17, weight = "bold"), text_color='black', corner_radius = 30)
+        gen_report = ctk.CTkButton(self, text = 'Generate Report', font= ctk.CTkFont('Arial', size = 17, weight = "bold"), text_color='white', corner_radius = 30)
         gen_report.pack(side = 'right', pady = 0, padx = (0, 15), ipady = 3)
         
 report_window= report_window()
