@@ -37,11 +37,8 @@ def items_msg_box():
     message = ctk.CTkLabel(message_frame, text='Item Added!', font=ctk.CTkFont('Arial', size=30, weight='bold'))
     message.pack(side = 'left', pady = 25)
     
-    report_button = ctk.CTkButton(msg_box, text='Report', text_color='black', fg_color='#F6F6F6', width=120)
-    report_button.pack(side = 'left', padx = 15)
-    
-    ok_button = ctk.CTkButton(msg_box, text='Okay', text_color='black', width=120)
-    ok_button.pack(side = 'left', padx = 15)
+    ok_button = ctk.CTkButton(msg_box, text='Okay', text_color='black', width=100)
+    ok_button.pack(side = 'right', padx = 15)
 
     msg_box.mainloop()
 
