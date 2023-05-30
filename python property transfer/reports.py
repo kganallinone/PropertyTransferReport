@@ -140,7 +140,7 @@ class report_window(ctk.CTk):
         result_desc.pack(side = 'left', pady = 5, padx = 10)
         quantity = tk.Spinbox(sub_frame4_4, from_= 0, to= 1000, borderwidth=1, font= ctk.CTkFont('Arial', size = 16), bg='white')
         quantity.pack(side = 'left', pady = 5, padx= 10)
-        add_button = ctk.CTkButton(sub_frame4_4, text='Add', width = 60, font=ctk.CTkFont('Arial', weight='bold'), text_color = 'white')
+        add_button = ctk.CTkButton(sub_frame4_4, text='Add', width = 60, font=ctk.CTkFont('Arial', weight='bold'),fg_color='#0077B8', text_color='white')
         add_button.pack(side = 'left', pady = 5, padx = 10)
         
         #item table
@@ -262,7 +262,7 @@ class report_window(ctk.CTk):
         receive_date = DateEntry(sub_frame8_2, font= ctk.CTkFont('Arial', size = 12) )
         receive_date.pack(side = 'left', pady = 2, padx = 10)
         
-        gen_report = ctk.CTkButton(self, text = 'Generate Report', font= ctk.CTkFont('Arial', size = 17, weight = "bold"), fg_color='#0077B8', text_color='white', corner_radius = 30)
+        gen_report = ctk.CTkButton(self, text = 'Generate Report', font= ctk.CTkFont('Arial', size = 17, weight = "bold"),fg_color='#0077B8', text_color='white', corner_radius = 30)
         gen_report.pack(side = 'right', pady = 0, padx = (0, 15), ipady = 3)
         
 report_window= report_window()
