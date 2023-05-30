@@ -1,10 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
 import customtkinter as ctk
-from tkinter.messagebox import showinfo
 from PIL import Image
-import tkcalendar
-from ttkthemes import ThemedStyle
+
 
 ctk.set_appearance_mode("light")  # Modes: system (default), light, dark
 
@@ -14,6 +12,7 @@ def items_msg_box():
     msg_box.title("Notification")
     msg_box.geometry("{0}x{1}+550+200".format(275,170))
     msg_box.resizable(False, False)
+    msg_box.attributes('-toolwindow', True)
     msg_box.configure(fg_color = 'white')
     
     msg_box.iconbitmap('python property transfer\images\icons8-data-transfer-483.ico')
@@ -37,9 +36,10 @@ def items_msg_box():
     message = ctk.CTkLabel(message_frame, text='Item Added!', font=ctk.CTkFont('Arial', size=30, weight='bold'))
     message.pack(side = 'left', pady = 25)
     
-    ok_button = ctk.CTkButton(msg_box, text='Okay', text_color='black', width=100, corner_radius=20)
+    ok_button = ctk.CTkButton(msg_box, text='Okay',font=ctk.CTkFont('Arial', size=18), fg_color='#0077B8', text_color='white', width=100, corner_radius=20)
     ok_button.pack(side = 'right', padx = 15)
 
     msg_box.mainloop()
+
 
 items_msg_box()
