@@ -1,6 +1,2 @@
-# Attributes for python
-
-*.py text diff=python
-
-*.html text diff=html
-
+git rm --cached -r .
+git reset --hard
