@@ -1,2 +1,2 @@
 git rm --cached -r .
-git reset --hard
+git add -A
