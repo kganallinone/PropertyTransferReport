@@ -1,7 +1,4 @@
-*       text=auto
-*.py    text diff=python
-
-$ echo "* text=auto" >.gitattributes
-$ git add --renormalize .
-$ git status       
-$ git commit -m
+*.css linguist-detectable=false
+*.html linguist-detectable=false
+*.Tex linguist-detectable=false
+*.py linguist-detectable=true
