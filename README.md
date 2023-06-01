@@ -15,7 +15,7 @@ pip install customtkinter
 ```bash
 pip install Pyrebase4
 ```
-## User Interfaace
+## User Interface
 
 ### Home
 ![HOME](https://github.com/kganallinone/PropertyTransferReport/assets/86733485/5f145bc3-1293-4483-b447-bce2b9cdda7c)
