@@ -7,9 +7,11 @@ Property Transfer Report System for PUP Lopez using Python tkinter/customtkinter
 
 ## Python Package Used
 
+[CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) is a python UI-library based on Tkinter, which provides new, modern and fully customizable widgets. 
 ```bash
-#For User Interface Design
-
 pip install customtkinter
-pip install tkinter
-
+```
+[Pyrebase4](https://github.com/nhorvath/Pyrebase4) is a simple python wrapper for the Firebase API.
+```bash
+pip install Pyrebase4
+```
