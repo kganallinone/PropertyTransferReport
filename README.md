@@ -1,7 +1,15 @@
-# Property Transfer Report
-Property Transfer Report System for PUP Lopez using HTML, JS. Firebase and Python
+# Property Transfer Report System
+Property Transfer Report System for PUP Lopez using Python tkinter/customtkinter and Firebase.
 
 ## FEATURES
 - Account Sign-in and Sign-up
-- Save, Edit, Delete, and View transaction
--
+- Add, Update, Delete, and View Items
+
+## Python Package Used
+
+```bash
+#For User Interface Design
+
+pip install customtkinter
+pip install tkinter
+
