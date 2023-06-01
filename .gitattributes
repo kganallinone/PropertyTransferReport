@@ -1,1 +1,5 @@
 *.py     text diff=python
+
+git add .
+git commit -m "Added .gitattributes to repo"
+git push
