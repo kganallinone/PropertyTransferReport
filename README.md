@@ -4,6 +4,9 @@ Property Transfer Report System for PUP Lopez using Python tkinter/customtkinter
 ## FEATURES
 - Account Sign-in and Sign-up
 - Add, Update, Delete, and View Items
+- Save and Generate file of PTR document tru .docx or .excel
+- Save data of PTR Transaction input from Client/Admin report  page to Firebase Realtimedatabase
+- Display the Approved and Pending request from the client in Admin Request page
 
 ## Python Package Used
 
