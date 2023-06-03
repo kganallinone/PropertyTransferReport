@@ -1,5 +1,5 @@
 # Property Transfer Report System
-Property Transfer Report System for PUP Lopez using Python tkinter/customtkinter and Firebase.
+Property Transfer Report System for PUP Lopez Computer Laboratories using Python tkinter/customtkinter package and Firebase.
 
 ## FEATURES
 - Account Sign-in and Sign-up
