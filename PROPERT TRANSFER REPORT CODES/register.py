@@ -9,15 +9,15 @@ def register_window():
     from login import login_window
     
     #<----------------FIREBASE CONFIGURATION--------------------------------->#
-    config = {
-        "apiKey": "AIzaSyCyCtXg05ff-tocdUaxjBFfa550TLfKZQ4",
-        "authDomain": "puplopez-ptp.firebaseapp.com",
-        "projectId": "puplopez-ptp",
-        "databaseURL": "https://puplopez-ptp-default-rtdb.firebaseio.com/",
-        "storageBucket": "puplopez-ptp.appspot.com",
-        "messagingSenderId": "638312293451",
-        "appId": "1:638312293451:web:79e9405d11db0496f599ce",
-        "measurementId": "G-9Z3SPKFR9V"
+      config = {
+        "apiKey": "xxxxxxx",
+        "authDomain": "xxxxxxx",
+        "projectId": "xxxxxxx",
+        "databaseURL": "xxxxxxx",
+        "storageBucket": "xxxxxxx",
+        "messagingSenderId": "xxxxxxx",
+        "appId": "xxxxxxx",
+        "measurementId": "xxxxxxx"
     }
     #<----------------FIREBASE CONNECT--------------------------------->#
     firebase = pyrebase.initialize_app(config)
