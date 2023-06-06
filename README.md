@@ -1,7 +1,7 @@
 # Property Transfer Report System
 
 ### PTR System LOGO
-[<img src="https://github.com/kganallinone/PropertyTransferReport/assets/86733485/f8a5ca41-38b7-45db-b8a5-e6860c9ce474" heigth="300" width="300"/>](https://www.mediafire.com/file/d2vksih1vi6kp6e/PropertyTransfer.zip/file)
+[<img src="https://github.com/kganallinone/PropertyTransferReport/assets/86733485/c6a11cea-a2e0-4493-877a-997e05d3fa7e" heigth="300" width="300"/>](https://www.mediafire.com/file/d2vksih1vi6kp6e/PropertyTransfer.zip/file)
 ### DESCRIPTION
 Property Transfer Report System for PUP Lopez Computer Laboratories using Python tkinter/customtkinter package and Firebase.
 ### DEVELOPERS / COLLABORATORS
