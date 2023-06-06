@@ -2,10 +2,10 @@
 Property Transfer Report System for PUP Lopez Computer Laboratories using Python tkinter/customtkinter package and Firebase.
 
 ### DEVELOPERS/COLLABORATORS
-- [Mr. Lynel Tabien](https://www.facebook.com/lynel.tabien) (OJT Coordinator) - Project idea
-- [Kent Gabriel Nuite](https://github.com/kganallinone) (Back-end Developer)
-- [Mark Malihan](https://github.com/MarkMalihan) (Front-end Developer)
-- [Martin Ancaja](https://github.com/Louies03) (Front-end Developer)
+- [Mr. Lynel Tabien](https://www.facebook.com/lynel.tabien) (OJT Coordinator)
+- [Kent Gabriel Nuite](https://github.com/kganallinone) (Back-end Developer/Intern)
+- [Mark Malihan](https://github.com/MarkMalihan) (Front-end Developer/Intern)
+- [Martin Ancaja](https://github.com/Louies03) (Front-end Developer/Intern)
 
 ## INSTALLATION
 
