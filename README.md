@@ -24,8 +24,6 @@ Property Transfer Report System for PUP Lopez Computer Laboratories using Python
 + [STEP 2] The run the application. Enjoy!
 
 
-### Requirements
-
 ## FEATURES
 - Account Sign-in and Sign-up
 - Add, Update, Delete, and View Items
