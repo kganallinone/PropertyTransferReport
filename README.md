@@ -9,7 +9,7 @@ Property Transfer Report System for PUP Lopez Computer Laboratories using Python
 
 ## INSTALLATION
 
-How to Download PropertyTransfer.exe?
+#### How to Download PropertyTransfer.exe?
 
 [STEP 1] Click this hyperlink. [PropertyTransfer.exe](https://www.mediafire.com/file/d2vksih1vi6kp6e/PropertyTransfer.zip/file)
 
@@ -17,7 +17,7 @@ How to Download PropertyTransfer.exe?
 
 [STEP 3] Extract PropertyTransfer.zip using pasword: "kgan".
 
-How to Run PropertyTransfer.exe?
+#### How to Run PropertyTransfer.exe?
 
 [STEP 1] Open "PropertyTransfer" folder and find PropertyTransfer.exe.
 
