@@ -1,16 +1,27 @@
 # Property Transfer Report System
 Property Transfer Report System for PUP Lopez Computer Laboratories using Python tkinter/customtkinter package and Firebase.
 
-### DEVELOPERS/COLLABORATORS
+### DESCRIPTION
+
+N/A
+
+### DEVELOPERS / COLLABORATORS
 - [Mr. Lynel Tabien](https://www.facebook.com/lynel.tabien) (OJT Trainer)
 - [Kent Gabriel Nuite](https://github.com/kganallinone) (Back-end Developer/Intern)
 - [Mark Malihan](https://github.com/MarkMalihan) (Front-end Developer/Intern)
 - [Martin Ancaja](https://github.com/Louies03) (Front-end Developer/Intern)
 
+## FEATURES
+- Account Sign-in and Sign-up
+- Add, Update, Delete, and View Items
+- Save and Generate file of PTR document tru .docx or .excel
+- Save data of PTR Transaction input from Client/Admin report  page to Firebase Realtimedatabase
+- Display the Approved and Pending request from the client in Admin Request page
+
 ## INSTALLATION
 
 ### NOTE
-This version is not yet complete and under working in progress until now.
+This version is not yet complete and working in progress until now.
 
 ### REQUIREMENTS
 - HDD: 48 MB of storage space (for now)
@@ -34,12 +45,7 @@ This version is not yet complete and under working in progress until now.
 + [STEP 2] The run the application. Enjoy!
 
 
-## FEATURES
-- Account Sign-in and Sign-up
-- Add, Update, Delete, and View Items
-- Save and Generate file of PTR document tru .docx or .excel
-- Save data of PTR Transaction input from Client/Admin report  page to Firebase Realtimedatabase
-- Display the Approved and Pending request from the client in Admin Request page
+
 
 ## Python Package Used
 
