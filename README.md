@@ -9,6 +9,16 @@ Property Transfer Report System for PUP Lopez Computer Laboratories using Python
 
 ## INSTALLATION
 
+### NOTE
+This version is not yet complete and under working in progress until now.
+
+### REQUIREMENTS
+- HDD: 48 MB of storage space (for now)
+- RAM: 8 GB
+- Operating System: Windows 10 (64-bit) version
+- Internet connection is needed to use all features 
+
+### DOWNLOAD
 #### I. How to Download PropertyTransfer.exe?
 
 + [STEP 1] Click this hyperlink. [PropertyTransfer.exe](https://www.mediafire.com/file/d2vksih1vi6kp6e/PropertyTransfer.zip/file)
