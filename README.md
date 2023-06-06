@@ -1,5 +1,8 @@
 # Property Transfer Report System
 Property Transfer Report System for PUP Lopez Computer Laboratories using Python tkinter/customtkinter package and Firebase.
+## INSTALLATION
+
+### Requirements
 
 ## FEATURES
 - Account Sign-in and Sign-up
@@ -22,3 +25,5 @@ pip install Pyrebase4
 
 ### Home
 ![HOME](https://github.com/kganallinone/PropertyTransferReport/assets/86733485/5f145bc3-1293-4483-b447-bce2b9cdda7c)
+
+|| [<img src="https://static.vecteezy.com/system/resources/previews/010/158/131/original/house-symbol-home-icon-sign-design-free-png.png" width="12"/> Goto HOME](https://github.com/kganallinone/KGANTutorials) || [<img src="https://static.vecteezy.com/system/resources/previews/010/158/131/original/house-symbol-home-icon-sign-design-free-png.png" width="12"/> Goto ADMIN](https://github.com/kganallinone/KGANTutorials) || [<img src="https://static.vecteezy.com/system/resources/previews/010/158/131/original/house-symbol-home-icon-sign-design-free-png.png" width="12"/> Goto CLIENT](https://github.com/kganallinone/KGANTutorials) ||
