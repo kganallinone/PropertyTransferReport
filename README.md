@@ -23,8 +23,9 @@ Property Transfer Report System for PUP Lopez Computer Laboratories using Python
 This version is not yet complete and working in progress until now.
 
 ### REQUIREMENTS
+Minimum
 - HDD: 48 MB of storage space (for now)
-- RAM: 8 GB
+- RAM: 4 GB
 - Operating System: Windows 10 (64-bit) version
 - Internet connection is needed to use all features 
 
