@@ -192,14 +192,14 @@ class user_profile_window(ctk.CTkToplevel):
         UB_label.place(y=340, x=40)
         
         ub_tbox = ctk.CTkEntry(rectangle_frame2, fg_color='white', font=ctk.CTkFont('Arial', size=14, weight="normal"), width=150)
-        ub_tbox.place(y=362, x=72)
+        ub_tbox.place(y=364, x=72)
         
         #User Address
         UA_label = ctk.CTkLabel(rectangle_frame2, text='Address', font=ctk.CTkFont('Arial', size=14, weight="normal"), text_color='black')
         UA_label.place(y=340, x=250)
         
         ua_tbox = ctk.CTkEntry(rectangle_frame2, fg_color='white', font=ctk.CTkFont('Arial', size=14, weight="normal"), width=300)
-        ua_tbox.place(y=362, x=295)
+        ua_tbox.place(y=364, x=295)
         
         #Update Button
         update_button = ctk.CTkButton(
@@ -227,7 +227,18 @@ class user_profile_window(ctk.CTkToplevel):
         )
         cancel_button.place(y=460, x=120)
         
-        
+        #Line frame
+        rectangle_frame1_3 = ctk.CTkFrame(
+            main_frame, 
+            fg_color='maroon',
+            height=500, 
+            width=2, 
+            border_width=10, 
+            border_color='maroon',  
+            corner_radius=0
+            )
+        rectangle_frame1_3.pack(fill='y',)
+        rectangle_frame1_3.pack(side='left', padx=300)
         
         
         
