@@ -124,22 +124,53 @@ class request_user_window(ctk.CTkToplevel):
         seven_frame = ctk.CTkFrame(main_frame)
         seven_frame.pack(fill='x')
         
-        # Customize the height of the frame
         custom_height = 182  # Set the desired height value
         seven_frame.configure(height=custom_height)
         seven_frame.pack_propagate(0)
         
+        #item table
         columns = ('items_list', 'quantity')
-        
+
         item_table_report = ttk.Treeview(seven_frame, columns=columns, show='headings', height=7)
         item_table_report.pack(side = 'left')
         item_table_report.place( x=10)
-        
-        item_table_report.column('items_list', width = 460)
-        item_table_report.column('quantity', width = 100)
-        
-        item_table_report.heading('items_list', text='Items List')
-        item_table_report.heading('quantity', text='Quantity')
+
+        # Configure column widths
+        column_widths = [460, 100]
+        for col, width in zip(columns, column_widths):
+            item_table_report.column(col, width=width)
+
+        # Configure column headings
+        headings = ['Items List', 'Quantity']
+        for col, heading in zip(columns, headings):
+            item_table_report.heading(col, text=heading, anchor='center')
+
+        # Sample data
+        data = [
+            ('Keyboard', 10, ),
+            ('Mouse', 5, ),
+            ('AVR', 10, ),
+            ('PC Set', 4, ),
+            ('Headset', 20, ),
+            ('Keyboard', 10, ),
+            ('Mouse', 5, ),
+            ('AVR', 10, ),
+            ('PC Set', 4, ),
+            ('Headset', 20, ),
+            ('Keyboard', 10, ),
+            ('Mouse', 5, ),
+            ('AVR', 10, ),
+            ('PC Set', 4, ),
+            ('Headset', 20, ),
+        ]
+
+        # Insert data into the table
+        for row in data:
+            item_table_report.insert('', 'end', values=row)
+
+        # Center the data in each column
+        for col in columns:
+            item_table_report.column(col, anchor='center')
         
         #Text box
         textbox_entry = ctk.CTkTextbox(seven_frame, font=ctk.CTkFont('Arial', size=14), width=410, height=165)
