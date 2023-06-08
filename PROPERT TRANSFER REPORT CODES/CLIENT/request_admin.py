@@ -34,7 +34,13 @@ class request_admin_window(ctk.CTkToplevel):
         button_frame.pack(fill='both', side='top')
 
         # Pending button
-        self.pending_button = ctk.CTkButton(button_frame, text='Pending (3)', font=ctk.CTkFont('Arial', size=14, weight="bold"), corner_radius=10, command=self.show_pending_content)
+        self.pending_button = ctk.CTkButton(
+            button_frame, 
+            text='Pending (3)', 
+            font=ctk.CTkFont('Arial', size=14, weight="bold"), 
+            corner_radius=10, 
+            command=self.show_pending_content
+            )
         self.pending_button.pack(side='left', pady=10, padx=10, anchor='center', expand=True)
 
         # Center line separator
@@ -42,7 +48,13 @@ class request_admin_window(ctk.CTkToplevel):
         center_line_frame.pack(side='left', padx=5, fill='y', expand=True)
 
         # Approved button
-        self.approved_button = ctk.CTkButton(button_frame, text='Approved', font=ctk.CTkFont('Arial', size=14, weight="bold"), corner_radius=10, command=self.show_approved_content)
+        self.approved_button = ctk.CTkButton(
+            button_frame, 
+            text='Approved', 
+            font=ctk.CTkFont('Arial', size=14, weight="bold"), 
+            corner_radius=10, 
+            command=self.show_approved_content
+            )
         self.approved_button.pack(side='right', pady=10, padx=10, anchor='center', expand=True)
 
         label = ctk.CTkLabel(header_frame, text='Requests', font=ctk.CTkFont('Arial', size=25, weight="bold"), text_color='white')
@@ -57,6 +69,8 @@ class request_admin_window(ctk.CTkToplevel):
 
         sub_frame = ctk.CTkFrame(self.frame, fg_color='transparent')
         sub_frame.pack(fill='x')
+        
+        self.show_pending_content()
         
     def clear_frame(self):
         for widget in self.frame.winfo_children():
@@ -155,10 +169,6 @@ class request_admin_window(ctk.CTkToplevel):
 
         pending_label = ctk.CTkLabel(rectangle_frame, text="Pending", font=ctk.CTkFont('Arial', size=16, weight="bold"), text_color='Red')
         pending_label.place(x=800, y=10)
-
-        
-
-        
         
     def show_approved_content(self):
         # Clear the frame
@@ -404,8 +414,6 @@ class request_admin_window(ctk.CTkToplevel):
         pending_label = ctk.CTkLabel(rectangle_frame, text="Approved", font=ctk.CTkFont('Arial', size=16, weight="bold"), text_color='Green')
         pending_label.place(x=800, y=10)
 
-        
-        
         
 
 if __name__ == '__main__':
