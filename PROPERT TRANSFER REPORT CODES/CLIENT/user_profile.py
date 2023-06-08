@@ -1,5 +1,7 @@
+from logging import RootLogger
 import tkinter as tk
 from tkinter import ttk
+from typing import Self
 import customtkinter as ctk
 from PIL import Image
 from tkcalendar import *
@@ -152,7 +154,9 @@ class user_profile_window(ctk.CTkToplevel):
         )
         rectangle_frame1_3.pack(fill='y', )
         rectangle_frame1_3.pack(side='left', padx=300)
-
+    
+        self.show_account_settings()
+    
     #Function for account setting
     def show_account_settings(self):
         if self.account_frame:
@@ -260,8 +264,9 @@ class user_profile_window(ctk.CTkToplevel):
         hover_color='dark gray'  # Change the background color on hover to dark red
         )
         cancel_button.place(y=440, x=120)
-        
     
+      
+
     #Function for password account
     def show_password_settings(self):
         if self.account_frame:
@@ -330,7 +335,10 @@ class user_profile_window(ctk.CTkToplevel):
         )
         cancel_button.place(y=440, x=120)
         
+              
+      
 if __name__ == '__main__':
     root = tk.Tk()
     user_profile_window(root)
     root.mainloop()
+
