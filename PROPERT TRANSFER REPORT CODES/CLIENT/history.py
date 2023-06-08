@@ -34,20 +34,11 @@ class history_window(ctk.CTkToplevel):
         label = ctk.CTkLabel(header_frame, text='History', font=ctk.CTkFont('Arial', size=25, weight="bold"), text_color='white')
         label.pack(side='right', pady=15, padx=15)
 
-        self_scroll_frame = ctk.CTkScrollableFrame(self, fg_color='white', height=560)
-        self_scroll_frame.pack(fill='both')
-
-        # Frame inside the scrollable frame
-        self.frame = ctk.CTkFrame(self_scroll_frame, height=400, corner_radius=20, fg_color='#F4F4F4')
-        self.frame.pack(fill='both', pady=5, padx=15)
-
-        sub_frame = ctk.CTkFrame(self.frame, fg_color='transparent')
-
         #item table
         columns = ('user_received', 'date', 'item', 'type', 'quantity', 'user_approved')
 
-        item_table_report = ttk.Treeview(self.frame, columns=columns, show='headings', height=40)
-        item_table_report.pack(fill=tk.BOTH)
+        item_table_report = ttk.Treeview(self, columns=columns, show='headings', height=22)
+        item_table_report.pack(fill='both' ,pady=10, padx=10)
 
         # Configure column widths
         column_widths = [100, 100, 100, 100, 100, 100]
@@ -66,6 +57,26 @@ class history_window(ctk.CTkToplevel):
             ('Prof. Andrea Zurbano', '06-24-2023', 'PC Set', 'Relocate', 2, 'Prof. Lynel P. Tabien'),
             ('Prof. Andrea Zurbano', '06-10-2023', 'AVR', 'Reassignment', 2, 'Prof. Lynel P. Tabien'),
             ('Prof. Andrea Zurbano', '06-10-2023', 'Mouse', 'Reassignment', 2, 'Prof. Lynel P. Tabien'),
+            ('Prof. Andrea Zurbano', '06-24-2023', 'Keyboard', 'Relocate', 5, 'Prof. Lynel P. Tabien'),
+            ('Prof. Andrea Zurbano', '06-24-2023', 'Mouse', 'Relocate', 3, 'Prof. Lynel P. Tabien'),
+            ('Prof. Andrea Zurbano', '06-24-2023', 'PC Set', 'Relocate', 2, 'Prof. Lynel P. Tabien'),
+            ('Prof. Andrea Zurbano', '06-10-2023', 'AVR', 'Reassignment', 2, 'Prof. Lynel P. Tabien'),
+            ('Prof. Andrea Zurbano', '06-10-2023', 'Mouse', 'Reassignment', 2, 'Prof. Lynel P. Tabien'),
+            ('Prof. Andrea Zurbano', '06-24-2023', 'Keyboard', 'Relocate', 5, 'Prof. Lynel P. Tabien'),
+            ('Prof. Andrea Zurbano', '06-24-2023', 'Mouse', 'Relocate', 3, 'Prof. Lynel P. Tabien'),
+            ('Prof. Andrea Zurbano', '06-24-2023', 'PC Set', 'Relocate', 2, 'Prof. Lynel P. Tabien'),
+            ('Prof. Andrea Zurbano', '06-10-2023', 'AVR', 'Reassignment', 2, 'Prof. Lynel P. Tabien'),
+            ('Prof. Andrea Zurbano', '06-10-2023', 'Mouse', 'Reassignment', 2, 'Prof. Lynel P. Tabien'),
+            ('Prof. Andrea Zurbano', '06-24-2023', 'Keyboard', 'Relocate', 5, 'Prof. Lynel P. Tabien'),
+            ('Prof. Andrea Zurbano', '06-24-2023', 'Mouse', 'Relocate', 3, 'Prof. Lynel P. Tabien'),
+            ('Prof. Lynel P Tabien', '06-24-2023', 'PC Set', 'Relocate', 2, 'Prof. Lynel P. Tabien'),
+            ('Prof. Lynel P Tabien', '06-10-2023', 'AVR', 'Reassignment', 2, 'Prof. Lynel P. Tabien'),
+            ('Prof. Lynel P Tabien', '06-10-2023', 'Mouse', 'Reassignment', 2, 'Prof. Lynel P. Tabien'),
+            ('Prof. Lynel P Tabien', '06-24-2023', 'Keyboard', 'Relocate', 5, 'Prof. Lynel P. Tabien'),
+            ('Prof. Lynel P Tabien', '06-24-2023', 'Mouse', 'Relocate', 3, 'Prof. Lynel P. Tabien'),
+            ('Prof. Lynel P Tabien', '06-24-2023', 'PC Set', 'Relocate', 2, 'Prof. Lynel P. Tabien'),
+            ('Prof. Lynel P Tabien', '06-10-2023', 'AVR', 'Reassignment', 2, 'Prof. Lynel P. Tabien'),
+            ('Prof. Lynel P Tabien', '06-10-2023', 'Mouse', 'Reassignment', 2, 'Prof. Lynel P. Tabien'),
         ]
 
         # Insert data into the table
