@@ -315,7 +315,10 @@ def user_profile_window():
     user_logo_label = ctk.CTkLabel(rectangle_frame1, image=user_logo, text=None)
     user_logo_label.place(y=40, x=84)
 
-    label = ctk.CTkLabel(rectangle_frame1, text='Prof. '+usersfn+" "+usermi+'\n '+userln ,font=ctk.CTkFont('Arial', size=18, weight="bold"), text_color='black')
+    # Get the first letter of the middle name
+    first_letter = usermi[0] if usermi else ''
+    
+    label = ctk.CTkLabel(rectangle_frame1, text='Prof. '+usersfn+" "+first_letter+"."'\n '+userln ,font=ctk.CTkFont('Arial', size=18, weight="bold"), text_color='black')
     label.place(y=140, x=30)
 
     # Home frame
