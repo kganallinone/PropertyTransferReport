@@ -2,7 +2,7 @@
 
 ### PTR System LOGO
 [<img src="https://github.com/kganallinone/PropertyTransferReport/assets/86733485/c6a11cea-a2e0-4493-877a-997e05d3fa7e" heigth="300" width="300"/>](https://www.mediafire.com/file/d2vksih1vi6kp6e/PropertyTransfer.zip/file)
-### DESCRIPTION
+## DESCRIPTION
 The Property Transfer Report System is a Python-based solution that leverages the power of CustomTkinter as the graphical user interface (GUI) and Pyrebase4 as the database to facilitate the seamless transfer of items from one location to another.
 
 With the customTkinter GUI, the system provides a user-friendly interface that allows authorized users to navigate through the system effortlessly. The customTkinter library enhances the standard Tkinter functionality, offering a more customized and visually appealing user experience. Users can easily input and manage data, create transfer requests, and access relevant information with ease.
@@ -12,11 +12,20 @@ To ensure efficient data storage and management, the system integrates pyrebase4
 Through the customTkinter GUI and pyrebase4 integration, the Property Transfer Report System provides a robust platform for users to register items, create transfer requests, and track the status of transfers. The system offers an intuitive user interface powered by customTkinter, enhancing the overall user experience. Meanwhile, pyrebase4 ensures the integrity and accessibility of data through its efficient integration with the Firebase Realtime Database.
 
 By combining these technologies, the Property Transfer Report System simplifies the transfer process, improves data organization, and enhances efficiency and accountability in property transfers.
-### DEVELOPERS / COLLABORATORS
-- [Mr. Lynel Tabien](https://www.facebook.com/lynel.tabien) (OJT Trainer)
-- [Kent Gabriel Nuite](https://github.com/kganallinone) (Back-end Developer/Intern)
-- [Mark Malihan](https://github.com/MarkMalihan) (Front-end Developer/Intern)
-- [Martin Ancaja](https://github.com/Louies03) (Front-end Developer/Intern)
+
+## DEVELOPERS / COLLABORATORS
+The development team responsible for creating the Property Transfer Report System consists of a group of talented individuals with expertise in Python. Here is a description of each team member and their respective positions:
+
+1. [Mr. Lynel Tabien](https://www.facebook.com/lynel.tabien) - Supervisor and Idea Generator:
+Lynel Tabien holds the position of supervisor within the development team. As the supervisor, Lynel oversees the project's progress and ensures that the system aligns with the desired objectives and requirements. Lynel, with a deep understanding of Python, plays a crucial role in generating innovative ideas and providing guidance to the team throughout the development process.
+
+2. [Mark Malihan](https://github.com/MarkMalihan) and [Martin Ancaja](https://github.com/Louies03) - Python Front-end Developers:
+Martin Ancaja and Mark Malihan are Python front-end developers within the team. They specialize in leveraging Python frameworks and libraries such as Django or Flask to design and implement the user interface of the Property Transfer Report System. Martin and Mark work closely with Lynel to bring the system's visual elements to life, creating an intuitive and visually appealing user interface using Python-based front-end technologies.
+
+3. [Kent Gabriel Nuite](https://github.com/kganallinone) - Python Full-stack Developer:
+Kent Gabriel Alba Nuite serves as the Python full-stack developer on the team. With proficiency in Python for both front-end and back-end development, Kent plays a pivotal role in building the entire system. Kent utilizes Python frameworks such as Django or Flask to develop the back-end functionality, integrate the database using Python-based technologies, and architect the system to ensure seamless operation and efficiency.
+
+Together, this team of skilled Python developers collaborates to bring the Property Transfer Report System to life. Under the guidance of Lynel Tabien, Martin Ancaja, Mark Malihan, and Kent Gabriel Alba Nuite work in their respective roles, utilizing their Python expertise to create a robust and user-friendly system that streamlines the transfer of items from one location to another.
 
 ## FEATURES
 The Property Transfer Report System aims to facilitate the transfer of items from one location to another using Python. Here are some potential features that could be included in such a system:
