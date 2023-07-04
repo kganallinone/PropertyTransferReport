@@ -16,14 +16,14 @@ By combining these technologies, the Property Transfer Report System simplifies 
 ## DEVELOPERS / COLLABORATORS
 The development team responsible for creating the Property Transfer Report System consists of a group of talented individuals with expertise in Python. Here is a description of each team member and their respective positions:
 
-1. **[Mr. Lynel Tabien](https://www.facebook.com/lynel.tabien)** - Supervisor and Idea Generator:
+1. **[Mr. Lynel Tabien](https://www.facebook.com/lynel.tabien)** - *Supervisor and Idea Generator(*:
 Lynel Tabien holds the position of supervisor within the development team. As the supervisor, Lynel oversees the project's progress and ensures that the system aligns with the desired objectives and requirements. Lynel, with a deep understanding of Python, plays a crucial role in generating innovative ideas and providing guidance to the team throughout the development process.
 
-2. **[Mark Malihan](https://github.com/MarkMalihan)** and **[Martin Ancaja](https://github.com/Louies03)** - Python Front-end Developers:
-Martin Ancaja and Mark Malihan are Python front-end developers within the team. They specialize in leveraging Python frameworks and libraries such as Django or Flask to design and implement the user interface of the Property Transfer Report System. Martin and Mark work closely with Lynel to bring the system's visual elements to life, creating an intuitive and visually appealing user interface using Python-based front-end technologies.
+2. **[Mark Malihan](https://github.com/MarkMalihan)** and **[Martin Ancaja](https://github.com/Louies03)** - *Python Front-end Developers*:
+Martin Ancaja and Mark Malihan are front-end developers within the team. They specialize in using customTkinter, a Python library, to design and implement the user interface of the Property Transfer Report System. With their expertise in customTkinter, Martin and Mark create visually appealing and user-friendly interfaces that enhance the overall user experience.
 
-3. **[Kent Gabriel Nuite](https://github.com/kganallinone)** - Python Full-stack Developer:
-Kent Gabriel Alba Nuite serves as the Python full-stack developer on the team. With proficiency in Python for both front-end and back-end development, Kent plays a pivotal role in building the entire system. Kent utilizes Python frameworks such as Django or Flask to develop the back-end functionality, integrate the database using Python-based technologies, and architect the system to ensure seamless operation and efficiency.
+3. **[Kent Gabriel Nuite](https://github.com/kganallinone)** - *Python Full-stack Developer*:
+Kent Gabriel Alba Nuite serves as the full-stack developer on the team. Kent is proficient in both front-end and back-end development, with a strong focus on Python. Kent utilizes customTkinter for the front-end development, creating intuitive interfaces, while also leveraging pyrebase4, a Python library, for the back-end database integration. With pyrebase4, Kent ensures secure and reliable storage of item and transfer-related information in the system.
 
 Together, this team of skilled Python developers collaborates to bring the Property Transfer Report System to life. Under the guidance of Lynel Tabien, Martin Ancaja, Mark Malihan, and Kent Gabriel Alba Nuite work in their respective roles, utilizing their Python expertise to create a robust and user-friendly system that streamlines the transfer of items from one location to another.
 
