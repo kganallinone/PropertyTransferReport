@@ -50,32 +50,40 @@ The Property Transfer Report System aims to facilitate the transfer of items fro
 
 ## INSTALLATION
 
-### NOTE
-This version is not yet complete and working in progress until now.
+###NOTE:
+This version of the Property Transfer Report System is currently a work in progress and not yet complete.
 
-### REQUIREMENTS
-Minimum
-- HDD: 48 MB of storage space (for now)
-- RAM: 4 GB
-- Operating System: Windows 10 (64-bit) version
-- Internet connection is needed to use all features 
+###REQUIREMENTS:
+Minimum system requirements for running the Property Transfer Report System:
 
-### DOWNLOAD
-#### I. How to Download PropertyTransfer.exe?
+Storage Space: At least 48 MB of available storage space.
+RAM: Minimum of 4 GB.
+Operating System: Windows 10 (64-bit) version.
+Internet Connection: An internet connection is required to access all features.
 
-+ [STEP 1] Click this hyperlink. [PropertyTransfer.exe](https://www.mediafire.com/file/d2vksih1vi6kp6e/PropertyTransfer.zip/file)
+###DOWNLOAD:
+To download the Property Transfer Report System, follow these steps:
 
-+ [STEP 2] Click the "DOWNLOAD" button, and wait until the download is finished.
+Step 1: Click on the following hyperlink: [PropertyTransfer.exe](https://www.mediafire.com/file/d2vksih1vi6kp6e/PropertyTransfer.zip/file)
 
-+ [STEP 3] Extract PropertyTransfer.zip using pasword: "kgan".
+Step 2: On the download page, locate and click the "DOWNLOAD" button. Wait for the download to complete.
 
-#### II. How to Run PropertyTransfer.exe?
+Step 3: Once the download is finished, locate the downloaded file, which will be named "PropertyTransfer.zip".
 
-+ [STEP 1] Open "PropertyTransfer" folder and find PropertyTransfer.exe.
+Step 4: Extract the contents of the "PropertyTransfer.zip" file. If prompted for a password, use "kgan" (without quotes).
 
-+ [STEP 2] The run the application. Enjoy!
+###RUNNING THE APPLICATION:
+To run the Property Transfer Report System, follow these steps:
 
+Step 1: Open the extracted "PropertyTransfer" folder.
 
+Step 2: Locate the file named "PropertyTransfer.exe".
+
+Step 3: Double-click on "PropertyTransfer.exe" to run the application.
+
+Step 4: The Property Transfer Report System will launch, and you can start using it.
+
+Please note that since this version of the system is still a work in progress, it may have limited functionality or incomplete features. We appreciate your understanding and patience as we continue to develop and enhance the Property Transfer Report System.
 
 
 ## Python Package Used
