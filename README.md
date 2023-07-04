@@ -50,10 +50,10 @@ The Property Transfer Report System aims to facilitate the transfer of items fro
 
 ## INSTALLATION
 
-###NOTE:
+### NOTE:
 This version of the Property Transfer Report System is currently a work in progress and not yet complete.
 
-###REQUIREMENTS:
+### REQUIREMENTS:
 Minimum system requirements for running the Property Transfer Report System:
 
 Storage Space: At least 48 MB of available storage space.
@@ -61,7 +61,7 @@ RAM: Minimum of 4 GB.
 Operating System: Windows 10 (64-bit) version.
 Internet Connection: An internet connection is required to access all features.
 
-###DOWNLOAD:
+### DOWNLOAD:
 To download the Property Transfer Report System, follow these steps:
 
 Step 1: Click on the following hyperlink: [PropertyTransfer.exe](https://www.mediafire.com/file/d2vksih1vi6kp6e/PropertyTransfer.zip/file)
@@ -72,7 +72,7 @@ Step 3: Once the download is finished, locate the downloaded file, which will be
 
 Step 4: Extract the contents of the "PropertyTransfer.zip" file. If prompted for a password, use "kgan" (without quotes).
 
-###RUNNING THE APPLICATION:
+### RUNNING THE APPLICATION:
 To run the Property Transfer Report System, follow these steps:
 
 Step 1: Open the extracted "PropertyTransfer" folder.
