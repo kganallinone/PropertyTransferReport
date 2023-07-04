@@ -16,7 +16,7 @@ By combining these technologies, the Property Transfer Report System simplifies 
 ## DEVELOPERS / COLLABORATORS
 The development team responsible for creating the Property Transfer Report System consists of a group of talented individuals with expertise in Python. Here is a description of each team member and their respective positions:
 
-1. **[Mr. Lynel Tabien](https://www.facebook.com/lynel.tabien)** - *Supervisor and Idea Generator(*:
+1. **[Mr. Lynel Tabien](https://www.facebook.com/lynel.tabien)** - *Supervisor and Idea Generator*:
 Lynel Tabien holds the position of supervisor within the development team. As the supervisor, Lynel oversees the project's progress and ensures that the system aligns with the desired objectives and requirements. Lynel, with a deep understanding of Python, plays a crucial role in generating innovative ideas and providing guidance to the team throughout the development process.
 
 2. **[Mark Malihan](https://github.com/MarkMalihan)** and **[Martin Ancaja](https://github.com/Louies03)** - *Python Front-end Developers*:
