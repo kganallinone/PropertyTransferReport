@@ -333,7 +333,24 @@ def request_user_window():
     
     request_user.mainloop()
     
+    
+    
 def open_select_items_window(request_user):
+    
+    config = {
+        "apiKey": "AIzaSyCyCtXg05ff-tocdUaxjBFfa550TLfKZQ4",
+        "authDomain": "puplopez-ptp.firebaseapp.com",
+        "projectId": "puplopez-ptp",
+        "databaseURL": "https://puplopez-ptp-default-rtdb.firebaseio.com/",
+        "storageBucket": "puplopez-ptp.appspot.com",
+        "messagingSenderId": "638312293451",
+        "appId": "1:638312293451:web:79e9405d11db0496f599ce",
+        "measurementId": "G-9Z3SPKFR9V"
+    }
+
+    firebase = pyrebase.initialize_app(config)
+    db = firebase.database()
+    
     request_user = tk.Toplevel()
     request_user.title("Select Items")
     request_user.geometry("500x400")  
@@ -360,276 +377,68 @@ def open_select_items_window(request_user):
     
     request_user.self_scroll_frame = ctk.CTkScrollableFrame(request_user.main_frame, fg_color='white', height=300)
     request_user.self_scroll_frame.pack(fill='both')
-    
-    #Rectangle 1 ###################################
-    request_user.rectangle_frame = ctk.CTkFrame(
-        request_user.self_scroll_frame,
-        fg_color='#DEDEDE',
-        height=80,
-        width=1834,
-        border_width=2,
-        border_color='maroon',
-        corner_radius=0
+        
+    item_db = db.child("items_info").order_by_child("DETECT").equal_to("TRUE").get()
+    for dt in item_db.each():
+
+        # Rectangle main ###################################
+        request_user.rectangle_frame = ctk.CTkFrame(
+            request_user.self_scroll_frame,
+            fg_color='#DEDEDE',
+            height=80,
+            width=1834,
+            border_width=2,
+            border_color='maroon',
+            corner_radius=0
         )
-    request_user.rectangle_frame.pack(fill='both')
-    
-    def toggle_entry_state(entry, check_var):
-        if check_var.get() == 1:
-            entry.configure(state='normal')
-            if entry.get() == "":
-                entry.insert(0, '1')
+        request_user.rectangle_frame.pack(fill='both', pady=2)
+
+        # Rectangle 1 ###################################
+        checkbox_item1 = ctk.CTkCheckBox(
+            request_user.rectangle_frame,
+            text='\t' + dt.val()['DES'],
+            font=ctk.CTkFont('Arial', size=14, weight="bold"),
+            text_color='black'
+        )
+        checkbox_item1.place(y=28, x=20)
+
+        item_stocks1 = ctk.CTkLabel(
+            request_user.rectangle_frame,
+            text='Items: ' + dt.val()['QTY'],
+            font=ctk.CTkFont('Arial', size=14, weight="bold"),
+            text_color='black'
+        )
+        item_stocks1.place(y=28, x=360)
+
+        item_qty1 = ctk.CTkLabel(
+            request_user.rectangle_frame,
+            text='Quantity:',
+            font=ctk.CTkFont('Arial', size=14, weight="bold"),
+            text_color='black'
+        )
+        item_qty1.place(y=28, x=616)
+
+        item_entry1 = ctk.CTkEntry(
+            request_user.rectangle_frame,
+            width=80,
+            fg_color='white',
+            state='disabled'  # Initially disable the entry field
+        )
+        item_entry1.place(y=28, x=680)
+
+    def toggle_entry():
+        if checkbox_item1.checked:
+            item_entry1.configure(state='normal')  # Enable the entry field
+            item_entry1.delete(0, 'end')  # Clear the value
+            item_entry1.insert(0, '1')  # Set the value to 1
         else:
-            entry.delete(0, 'end')
-            entry.configure(state='disabled')
+            item_entry1.delete(0, 'end')  # Clear the value
+            item_entry1.configure(state='disabled')  # Disable the entry field
 
-    # Rectangle 1 ###################################
-    check_var1 = tk.IntVar()
-    checkbox_item1 = ctk.CTkCheckBox(
-        request_user.rectangle_frame,
-        text='\t AVR',
-        font=ctk.CTkFont('Arial', size=14, weight="bold"),
-        text_color='black',
-        variable=check_var1
-        )
-    checkbox_item1.place(y=28, x=20)
-
-    item_stocks1 = ctk.CTkLabel(
-        request_user.rectangle_frame,
-        text='Items: 50',
-        font=ctk.CTkFont('Arial', size=14, weight="bold"),
-        text_color='black'
-        )
-    item_stocks1.place(y=28, x=360)
-
-    item_qty1 = ctk.CTkLabel(
-        request_user.rectangle_frame,
-        text='Quantity:',
-        font=ctk.CTkFont('Arial', size=14, weight="bold"),
-        text_color='black'
-        )
-    item_qty1.place(y=28, x=616)
-
-    item_entry1 = ctk.CTkEntry(
-        request_user.rectangle_frame,
-        width=80,
-        fg_color='white',
-        state='disabled'
-        )
-    item_entry1.place(y=28, x=680)
-
-    check_var1.trace(
-        'w',
-        lambda *args: toggle_entry_state(item_entry1, check_var1)
-        )
-
-    # Rectangle 2 ###################################
-    request_user.rectangle_frame = ctk.CTkFrame(
-        request_user.self_scroll_frame,
-        fg_color='#DEDEDE',
-        height=80,
-        width=1834,
-        border_width=2,
-        border_color='maroon',
-        corner_radius=0
-        )
-    request_user.rectangle_frame.pack(fill='both', pady=2)
-
-    check_var2 = tk.IntVar()
-    checkbox_item2 = ctk.CTkCheckBox(
-        request_user.rectangle_frame,
-        text='\t keyboard',
-        font=ctk.CTkFont('Arial', size=14, weight="bold"),
-        text_color='black',
-        variable=check_var2
-        )
-    checkbox_item2.place(y=28, x=20)
-
-    item_stocks2 = ctk.CTkLabel(
-        request_user.rectangle_frame, 
-        text='Items: 20',
-        font=ctk.CTkFont('Arial', size=14, weight="bold"),
-        text_color='black'
-        )
-    item_stocks2.place(y=28, x=360)
-
-    item_qty2 = ctk.CTkLabel(
-        request_user.rectangle_frame,
-        text='Quantity:',
-        font=ctk.CTkFont('Arial', size=14, weight="bold"),
-        text_color='black'
-        )
-    item_qty2.place(y=28, x=616)
-
-    item_entry2 = ctk.CTkEntry(
-        request_user.rectangle_frame,
-        width=80,
-        fg_color='white', 
-        state='disabled'
-        )
-    item_entry2.place(y=28, x=680)
-
-    check_var2.trace(
-        'w', 
-        lambda *args: toggle_entry_state(item_entry2, check_var2)
-        )
-
-    # Rectangle 3 ###################################
-    request_user.rectangle_frame = ctk.CTkFrame(
-        request_user.self_scroll_frame,
-        fg_color='#DEDEDE',
-        height=80,
-        width=1834,
-        border_width=2,
-        border_color='maroon',
-        corner_radius=0
-        )
-    request_user.rectangle_frame.pack(fill='both', pady=2)
-
-    check_var3 = tk.IntVar()
-    checkbox_item3 = ctk.CTkCheckBox(
-        request_user.rectangle_frame,
-        text='\t Mouse',
-        font=ctk.CTkFont('Arial', size=14, weight="bold"),
-        text_color='black',
-        variable=check_var3
-        )
-    checkbox_item3.place(y=28, x=20)
-
-    item_stocks3 = ctk.CTkLabel(
-        request_user.rectangle_frame,
-        text='Items: 20',
-        font=ctk.CTkFont('Arial', size=14, weight="bold"),
-        text_color='black'
-        )
-    item_stocks3.place(y=28, x=360)
-
-    item_qty3 = ctk.CTkLabel(
-        request_user.rectangle_frame,
-        text='Quantity:',
-        font=ctk.CTkFont('Arial', size=14, weight="bold"),
-        text_color='black'
-        )
-    item_qty3.place(y=28, x=616)
-
-    item_entry3 = ctk.CTkEntry(
-        request_user.rectangle_frame,
-        width=80,
-        fg_color='white',
-        state='disabled'
-        )
-    item_entry3.place(y=28, x=680)
-
-    check_var3.trace(
-        'w', 
-        lambda *args: toggle_entry_state(item_entry3, check_var3)
-        )
-
-    # Rectangle 4 ###################################
-    request_user.rectangle_frame = ctk.CTkFrame(
-        request_user.self_scroll_frame, 
-        fg_color='#DEDEDE', 
-        height=80, 
-        width=1834, 
-        border_width=2, 
-        border_color='maroon', 
-        corner_radius=0
-        )
-    request_user.rectangle_frame.pack(fill='both', pady=2)
-
-    check_var4 = tk.IntVar()
-    checkbox_item4 = ctk.CTkCheckBox(
-        request_user.rectangle_frame,
-        text='\t PC Set',
-        font=ctk.CTkFont('Arial', size=14, weight="bold"),
-        text_color='black',
-        variable=check_var4
-        )
-    checkbox_item4.place(y=28, x=20)
-
-    item_stocks4 = ctk.CTkLabel(
-        request_user.rectangle_frame,
-        text='Items: 30',
-        font=ctk.CTkFont('Arial', size=14, weight="bold"),
-        text_color='black'
-        )
-    item_stocks4.place(y=28, x=360)
-
-    item_qty4 = ctk.CTkLabel(
-        request_user.rectangle_frame,
-        text='Quantity:',
-        font=ctk.CTkFont('Arial', size=14, weight="bold"),
-        text_color='black'
-        )
-    item_qty4.place(y=28, x=616)
-
-    item_entry4 = ctk.CTkEntry(
-        request_user.rectangle_frame,
-        width=80,
-        fg_color='white',
-        state='disabled'
-        )
-    item_entry4.place(y=28, x=680)
-
-    check_var4.trace(
-        'w', 
-        lambda *args: toggle_entry_state(item_entry4, check_var4)
-        )
-
-    # Rectangle 5 ###################################
-    request_user.rectangle_frame = ctk.CTkFrame(
-        request_user.self_scroll_frame,
-        fg_color='#DEDEDE', 
-        height=80, 
-        width=1834, 
-        border_width=2, 
-        border_color='maroon',
-        corner_radius=0
-        )
-    request_user.rectangle_frame.pack(fill='both', pady=2)
-
-    check_var5 = tk.IntVar()
-    checkbox_item5 = ctk.CTkCheckBox(
-        request_user.rectangle_frame, 
-        text='\t UPS', 
-        font=ctk.CTkFont('Arial', size=14, weight="bold"),
-        text_color='black',
-        variable=check_var5
-        )
-    checkbox_item5.place(y=28, x=20)
-
-    item_stocks5 = ctk.CTkLabel(
-        request_user.rectangle_frame,
-        text='Items: 100',
-        font=ctk.CTkFont('Arial', size=14, weight="bold"),
-        text_color='black'
-        )
-    item_stocks5.place(y=28, x=360)
-
-    item_qty5 = ctk.CTkLabel(
-        request_user.rectangle_frame,
-        text='Quantity:',
-        font=ctk.CTkFont('Arial', size=14, weight="bold"),
-        text_color='black'
-        )
-    item_qty5.place(y=28, x=616)
-
-    item_entry5 = ctk.CTkEntry(
-        request_user.rectangle_frame,
-        width=80,
-        fg_color='white',
-        state='disabled'
-        )
-    item_entry5.place(y=28, x=680)
-
-    check_var5.trace(
-        'w', 
-        lambda *args: toggle_entry_state(item_entry5, check_var5)
-        )
+    checkbox_item1.checked = False  # Create a variable to store the checkbox state
+    checkbox_item1.configure(command=toggle_entry)  # Bind the toggle_entry function to the checkbox command
 
 
-
-
-    
     #################################################
 
     #Third frame
