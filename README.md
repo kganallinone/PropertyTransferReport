@@ -3,7 +3,7 @@
 ### PTR System LOGO
 [<img src="https://github.com/kganallinone/PropertyTransferReport/assets/86733485/c6a11cea-a2e0-4493-877a-997e05d3fa7e" heigth="300" width="300"/>](https://www.mediafire.com/file/d2vksih1vi6kp6e/PropertyTransfer.zip/file)
 ## DESCRIPTION
-The Property Transfer Report System is a Python-based solution that leverages the power of CustomTkinter as the graphical user interface (GUI) and Pyrebase4 as the database to facilitate the seamless transfer of items from one location to another.
+The **Property Transfer Report System** is a Python-based solution that leverages the power of *CustomTkinter* as the graphical user interface (GUI) and *Pyrebase4* as the database to *facilitate the seamless transfer of items from one location to another*.
 
 With the customTkinter GUI, the system provides a user-friendly interface that allows authorized users to navigate through the system effortlessly. The customTkinter library enhances the standard Tkinter functionality, offering a more customized and visually appealing user experience. Users can easily input and manage data, create transfer requests, and access relevant information with ease.
 
@@ -16,13 +16,13 @@ By combining these technologies, the Property Transfer Report System simplifies 
 ## DEVELOPERS / COLLABORATORS
 The development team responsible for creating the Property Transfer Report System consists of a group of talented individuals with expertise in Python. Here is a description of each team member and their respective positions:
 
-1. [Mr. Lynel Tabien](https://www.facebook.com/lynel.tabien) - Supervisor and Idea Generator:
+1. **[Mr. Lynel Tabien](https://www.facebook.com/lynel.tabien)** - Supervisor and Idea Generator:
 Lynel Tabien holds the position of supervisor within the development team. As the supervisor, Lynel oversees the project's progress and ensures that the system aligns with the desired objectives and requirements. Lynel, with a deep understanding of Python, plays a crucial role in generating innovative ideas and providing guidance to the team throughout the development process.
 
-2. [Mark Malihan](https://github.com/MarkMalihan) and [Martin Ancaja](https://github.com/Louies03) - Python Front-end Developers:
+2. **[Mark Malihan](https://github.com/MarkMalihan)** and **[Martin Ancaja](https://github.com/Louies03)** - Python Front-end Developers:
 Martin Ancaja and Mark Malihan are Python front-end developers within the team. They specialize in leveraging Python frameworks and libraries such as Django or Flask to design and implement the user interface of the Property Transfer Report System. Martin and Mark work closely with Lynel to bring the system's visual elements to life, creating an intuitive and visually appealing user interface using Python-based front-end technologies.
 
-3. [Kent Gabriel Nuite](https://github.com/kganallinone) - Python Full-stack Developer:
+3. **[Kent Gabriel Nuite](https://github.com/kganallinone)** - Python Full-stack Developer:
 Kent Gabriel Alba Nuite serves as the Python full-stack developer on the team. With proficiency in Python for both front-end and back-end development, Kent plays a pivotal role in building the entire system. Kent utilizes Python frameworks such as Django or Flask to develop the back-end functionality, integrate the database using Python-based technologies, and architect the system to ensure seamless operation and efficiency.
 
 Together, this team of skilled Python developers collaborates to bring the Property Transfer Report System to life. Under the guidance of Lynel Tabien, Martin Ancaja, Mark Malihan, and Kent Gabriel Alba Nuite work in their respective roles, utilizing their Python expertise to create a robust and user-friendly system that streamlines the transfer of items from one location to another.
@@ -30,21 +30,21 @@ Together, this team of skilled Python developers collaborates to bring the Prope
 ## FEATURES
 The Property Transfer Report System aims to facilitate the transfer of items from one location to another using Python. Here are some potential features that could be included in such a system:
 
-- User Authentication: Implement a login system to ensure that only authorized users can access the system. This helps maintain data security and prevents unauthorized transfers.
+- **User Authentication**: Implement a login system to ensure that only authorized users can access the system. This helps maintain data security and prevents unauthorized transfers.
 
-- Item Registration: Allow users to register items into the system by providing relevant details such as item name, description, quantity, and current location.
+- **Item Registration**: Allow users to register items into the system by providing relevant details such as item name, description, quantity, and current location.
 
-- Transfer Request: Enable users to create transfer requests for specific items. They can specify the destination location and any additional instructions or requirements for the transfer.
+- **Transfer Request**: Enable users to create transfer requests for specific items. They can specify the destination location and any additional instructions or requirements for the transfer.
 
-- Approval Workflow: Implement an approval workflow where transfer requests can be reviewed and approved by designated individuals or departments. This ensures that transfers are authorized and properly managed.
+- **Approval Workflow**: Implement an approval workflow where transfer requests can be reviewed and approved by designated individuals or departments. This ensures that transfers are authorized and properly managed.
 
-- Real-time Tracking: Provide a mechanism to track the status of transfer requests in real-time. Users should be able to view the current location of the item and any updates regarding the transfer process.
+- **Real-time Tracking**: Provide a mechanism to track the status of transfer requests in real-time. Users should be able to view the current location of the item and any updates regarding the transfer process.
 
-- Notification System: Send notifications to relevant parties when a transfer request is submitted, approved, or completed. This ensures that all stakeholders are kept informed about the progress of transfers.
+- **Notification System**: Send notifications to relevant parties when a transfer request is submitted, approved, or completed. This ensures that all stakeholders are kept informed about the progress of transfers.
 
-- Reporting and Analytics: Generate reports and analytics to provide insights into the transfer activities. This could include information such as transfer history, average transfer time, and transfer trends.
+- **Reporting and Analytics**: Generate reports and analytics to provide insights into the transfer activities. This could include information such as transfer history, average transfer time, and transfer trends.
 
-- Data Storage and Management: Implement a database to store item and transfer-related information securely. This allows for efficient data retrieval, update, and backup.
+- **Data Storage and Management**: Implement a database to store item and transfer-related information securely. This allows for efficient data retrieval, update, and backup.
 
 
 
@@ -56,33 +56,33 @@ This version of the Property Transfer Report System is currently a work in progr
 ### REQUIREMENTS:
 Minimum system requirements for running the Property Transfer Report System:
 
-- Storage Space: At least 48 MB of available storage space.
-- RAM: Minimum of 4 GB.
-- Operating System: Windows 10 (64-bit) version.
-- Internet Connection: An internet connection is required to access all features.
+- **Storage Space**: At least 48 MB of available storage space.
+- **RAM**: Minimum of 4 GB.
+- **Operating System**: Windows 10 (64-bit) version.
+- **Internet Connection**: An internet connection is required to access all features.
 
 
 ### DOWNLOAD:
 To download the Property Transfer Report System, follow these steps:
 
-Step 1: Click on the following hyperlink: [PropertyTransfer.exe](https://www.mediafire.com/file/d2vksih1vi6kp6e/PropertyTransfer.zip/file)
+**Step 1**: Click on the following hyperlink: [PropertyTransfer.exe](https://www.mediafire.com/file/d2vksih1vi6kp6e/PropertyTransfer.zip/file)
 
-Step 2: On the download page, locate and click the "DOWNLOAD" button. Wait for the download to complete.
+**Step 2**: On the download page, locate and click the **"DOWNLOAD"** button. Wait for the download to complete.
 
-Step 3: Once the download is finished, locate the downloaded file, which will be named "PropertyTransfer.zip".
+**Step 3**: Once the download is finished, locate the downloaded file, which will be named *"PropertyTransfer.zip"*.
 
-Step 4: Extract the contents of the "PropertyTransfer.zip" file. If prompted for a password, use "kgan" (without quotes).
+**Step 4**: Extract the contents of the *"PropertyTransfer.zip"* file. If prompted for a password, use *"kgan"* (without quotes).
 
 ### RUNNING THE APPLICATION:
 To run the Property Transfer Report System, follow these steps:
 
-Step 1: Open the extracted "PropertyTransfer" folder.
+**Step 1**: Open the extracted "PropertyTransfer" folder.
 
-Step 2: Locate the file named "PropertyTransfer.exe".
+**Step 2**: Locate the file named "PropertyTransfer.exe".
 
-Step 3: Double-click on "PropertyTransfer.exe" to run the application.
+**Step 3**: Double-click on "PropertyTransfer.exe" to run the application.
 
-Step 4: The Property Transfer Report System will launch, and you can start using it.
+**Step 4**: The Property Transfer Report System will launch, and you can start using it.
 
 Please note that since this version of the system is still a work in progress, it may have limited functionality or incomplete features. We appreciate your understanding and patience as we continue to develop and enhance the Property Transfer Report System.
 
