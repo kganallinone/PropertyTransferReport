@@ -28,7 +28,7 @@ Kent Gabriel Alba Nuite serves as the full-stack developer on the team. Kent is 
 Together, this team of skilled Python developers collaborates to bring the Property Transfer Report System to life. Under the guidance of Lynel Tabien, Martin Ancaja, Mark Malihan, and Kent Gabriel Alba Nuite work in their respective roles, utilizing their Python expertise to create a robust and user-friendly system that streamlines the transfer of items from one location to another.
 
 ## FEATURES
-The Property Transfer Report System aims to facilitate the transfer of items from one location to another using Python. Here are some potential features that could be included in such a system:
+The Property Transfer Report System aims to facilitate the transfer of items from one location to another using Python. Here are some features included in a system:
 
 - **User Authentication**: Implement a login system to ensure that only authorized users can access the system. This helps maintain data security and prevents unauthorized transfers.
 
