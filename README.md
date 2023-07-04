@@ -11,11 +11,25 @@ Property Transfer Report System for PUP Lopez Computer Laboratories using Python
 - [Martin Ancaja](https://github.com/Louies03) (Front-end Developer/Intern)
 
 ## FEATURES
-- Account Sign-in and Sign-up
-- Add, Update, Delete, and View Items
-- Save and Generate file of PTR document tru .docx or .excel
-- Save data of PTR Transaction input from Client/Admin report  page to Firebase Realtimedatabase
-- Display the Approved and Pending request from the client in Admin Request page
+The Property Transfer Report System aims to facilitate the transfer of items from one location to another using Python. Here are some potential features that could be included in such a system:
+
+- User Authentication: Implement a login system to ensure that only authorized users can access the system. This helps maintain data security and prevents unauthorized transfers.
+
+- Item Registration: Allow users to register items into the system by providing relevant details such as item name, description, quantity, and current location.
+
+- Transfer Request: Enable users to create transfer requests for specific items. They can specify the destination location and any additional instructions or requirements for the transfer.
+
+- Approval Workflow: Implement an approval workflow where transfer requests can be reviewed and approved by designated individuals or departments. This ensures that transfers are authorized and properly managed.
+
+- Real-time Tracking: Provide a mechanism to track the status of transfer requests in real-time. Users should be able to view the current location of the item and any updates regarding the transfer process.
+
+- Notification System: Send notifications to relevant parties when a transfer request is submitted, approved, or completed. This ensures that all stakeholders are kept informed about the progress of transfers.
+
+- Reporting and Analytics: Generate reports and analytics to provide insights into the transfer activities. This could include information such as transfer history, average transfer time, and transfer trends.
+
+- Data Storage and Management: Implement a database to store item and transfer-related information securely. This allows for efficient data retrieval, update, and backup.
+
+
 
 ## INSTALLATION
 
