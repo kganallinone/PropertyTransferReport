@@ -57,9 +57,13 @@ This version of the Property Transfer Report System is currently a work in progr
 Minimum system requirements for running the Property Transfer Report System:
 
 Storage Space: At least 48 MB of available storage space.
+
 RAM: Minimum of 4 GB.
+
 Operating System: Windows 10 (64-bit) version.
+
 Internet Connection: An internet connection is required to access all features.
+
 
 ### DOWNLOAD:
 To download the Property Transfer Report System, follow these steps:
