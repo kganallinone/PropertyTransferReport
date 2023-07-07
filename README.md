@@ -22,9 +22,9 @@ Lynel Tabien holds the position of supervisor within the development team. As th
 2. **[Kent Gabriel Nuite](https://github.com/kganallinone)** - *Python Full-stack Developer*:
 Kent Gabriel Alba Nuite serves as the full-stack developer on the team. Kent is proficient in both front-end and back-end development, with a strong focus on Python. Kent utilizes customTkinter for the front-end development, creating intuitive interfaces, while also leveraging pyrebase4, a Python library, for the back-end database integration. With pyrebase4, Kent ensures secure and reliable storage of item and transfer-related information in the system.
 
-3. **[Mark Malihan](https://github.com/MarkMalihan)** - *Python Front-end Developers*: Mark Malihan are front-end developers within the team. They specialize in using customTkinter, a Python library, to design and implement the user interface of the Property Transfer Report System. With their expertise in customTkinter, Martin and Mark create visually appealing and user-friendly interfaces that enhance the overall user experience.
+3. **[Mark Malihan](https://github.com/MarkMalihan)** - *Python Front-end Developers*: Mark Malihan are front-end developers within the team. He specialize in using customTkinter, a Python library, to design and implement the user interface of the Property Transfer Report System. With his expertise in customTkinter, Mark create visually appealing and user-friendly interfaces that enhance the overall user experience.
 
-4 **[Martin Ancaja](https://github.com/Louies03)** - 
+4. **[Martin Ancaja](https://github.com/Louies03)** - *Python Assisstant Full-stack Developer*:
 
 Together, this team of skilled Python developers collaborates to bring the Property Transfer Report System to life. Under the guidance of Lynel Tabien, Martin Ancaja, Mark Malihan, and Kent Gabriel Alba Nuite work in their respective roles, utilizing their Python expertise to create a robust and user-friendly system that streamlines the transfer of items from one location to another.
 
