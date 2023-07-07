@@ -3,15 +3,8 @@
 ### PTR System LOGO
 [<img src="https://github.com/kganallinone/PropertyTransferReport/assets/86733485/c6a11cea-a2e0-4493-877a-997e05d3fa7e" heigth="300" width="300"/>](https://www.mediafire.com/file/d2vksih1vi6kp6e/PropertyTransfer.zip/file)
 ## DESCRIPTION
-The **Property Transfer Report System** is a Python-based solution that leverages the power of *CustomTkinter* as the graphical user interface (GUI) and *Pyrebase4* as the database to *facilitate the seamless transfer of items from one location to another*.
 
-With the customTkinter GUI, the system provides a user-friendly interface that allows authorized users to navigate through the system effortlessly. The customTkinter library enhances the standard Tkinter functionality, offering a more customized and visually appealing user experience. Users can easily input and manage data, create transfer requests, and access relevant information with ease.
-
-To ensure efficient data storage and management, the system integrates pyrebase4 as the database solution. Pyrebase4 is a Python library that allows seamless integration with the Firebase Realtime Database, a cloud-based NoSQL database. This integration ensures secure and reliable storage of item and transfer-related information.
-
-Through the customTkinter GUI and pyrebase4 integration, the Property Transfer Report System provides a robust platform for users to register items, create transfer requests, and track the status of transfers. The system offers an intuitive user interface powered by customTkinter, enhancing the overall user experience. Meanwhile, pyrebase4 ensures the integrity and accessibility of data through its efficient integration with the Firebase Realtime Database.
-
-By combining these technologies, the Property Transfer Report System simplifies the transfer process, improves data organization, and enhances efficiency and accountability in property transfers.
+The **Property Transfer Report System**, developed specifically for the Polytechnic University of the Philippines Computer Laboratories, is a Python-based solution that utilizes *CustomTkinter* as the graphical user interface (GUI) and *Pyrebase4* as the database. This system provides a user-friendly interface powered by CustomTkinter, allowing authorized users to effortlessly navigate, input and manage data, create transfer requests, and track transfer status. Pyrebase4 integration ensures secure and reliable storage of item and transfer-related information in the Firebase Realtime Database. With these technologies combined, the system streamlines transfers, enhances data organization, and promotes efficiency and accountability in property management.
 
 ## DEVELOPERS / COLLABORATORS
 The development team responsible for creating the Property Transfer Report System consists of a group of talented individuals with expertise in Python. Here is a description of each team member and their respective positions:
