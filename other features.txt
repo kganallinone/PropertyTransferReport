@@ -1,0 +1,7 @@
+CLIENT SIDE
+-SENDER
+
+-RECIEVER
+>recieved email if transaction is approved or nottttttttttttttttttttttttttttttttttttttttttttttt
+ADMIN SIDE
+- " " " new request.
