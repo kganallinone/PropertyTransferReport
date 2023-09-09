@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../../KENT FILE/KGAN PROJECT"
+		},
+		{
+			"path": "../../../TEST"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "KGAN PROJECT"
+	}
+}
